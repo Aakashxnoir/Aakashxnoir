@@ -10,12 +10,9 @@
 
 <br/>
 
-<!----------------------------------------- WHOAMI ----------------------------------------->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0D0D0D&height=2&width=100%" width="100%"/>
+---
 
-<h2>
-  <img src="https://img.shields.io/badge/─────────────────────────────────────────────────────&nbsp;&nbsp;&nbsp;&nbsp;&gt;_&nbsp;whoami-0D0D0D?style=flat-square&labelColor=0D0D0D&color=c9a84c&logoColor=c9a84c"/>
-</h2>
+## `> whoami`
 
 <table>
   <tr>
@@ -36,9 +33,7 @@
   </tr>
 </table>
 
-<br/>
-
-<!----------------------------------------- STACK ----------------------------------------->
+---
 
 ## `⚙️ stack`
 
@@ -52,9 +47,7 @@
   <img src="https://img.shields.io/badge/Node.js-0D0D0D?style=for-the-badge&logo=nodedotjs&logoColor=c9a84c"/>
 </p>
 
-<br/>
-
-<!----------------------------------------- FOCUS ----------------------------------------->
+---
 
 ## `🎯 focus`
 
@@ -67,15 +60,13 @@
   ╚══════════════════════════════════════════════════════════╝
 ```
 
-<br/>
-
-<!----------------------------------------- PROJECTS ----------------------------------------->
+---
 
 ## `🗂️ projects`
 
 <div align="center">
 
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`project`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | `stack` | `type` |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`project`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | `stack` | `type` |
 |:--|:--|:--:|
 | 🔒 [Landroid_Analysis_App](https://github.com/Aakashxnoir/Landroid_Analysis-App) | ![TS](https://img.shields.io/badge/TypeScript-0D0D0D?style=flat-square&logo=typescript&logoColor=c9a84c) | Private |
 | 🌐 [College-Productivity-OS](https://github.com/Aakashxnoir/College-Productivity-OS-) | ![JS](https://img.shields.io/badge/JavaScript-0D0D0D?style=flat-square&logo=javascript&logoColor=c9a84c) | Full-Stack |
@@ -88,9 +79,7 @@
 
 </div>
 
-<br/>
-
-<!----------------------------------------- STATS ----------------------------------------->
+---
 
 ## `📊 stats`
 
@@ -102,7 +91,6 @@
 
 <br/>
 
-<!----------------------------------------- FOOTER ----------------------------------------->
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&height=100&color=0D0D0D&section=footer&text=in%20the%20noir%20%E2%80%94%20every%20bug%20is%20a%20clue%2C%20every%20commit%2C%20a%20confession.&fontColor=444444&fontSize=13&fontAlignY=65" width="100%"/>
 </p>
