@@ -59,14 +59,13 @@
 
 ## `🎯 focus`
 
-```
-  ╔══════════════════════════════════════════════════════════╗
-  ║  ▸  Building full-stack productivity systems             ║
-  ║  ▸  Crafting multilingual & accessible web apps          ║
-  ║  ▸  Turning ideas into shipped products                  ║
-  ║  ▸  Clean code, darker aesthetics                        ║
-  ╚══════════════════════════════════════════════════════════╝
-```
+╔══════════════════════════════════════════════════════════╗
+║ ▸ Building full-stack productivity systems ║
+║ ▸ Crafting multilingual & accessible web apps ║
+║ ▸ Turning ideas into shipped products ║
+║ ▸ Clean code, darker aesthetics ║
+╚══════════════════════════════════════════════════════════╝
+
 
 ---
 
@@ -74,14 +73,19 @@
 
 | Project | Description | Stack | Type |
 |---|---|:---:|:---:|
+| 🌿 [life-tracker](https://github.com/Aakashxnoir/life-tracker) | Personal habit & focus tracker — React, Vite, Tailwind, Firebase (auth, Firestore, storage) | ![JS](https://img.shields.io/badge/JavaScript-0D0D0D?style=flat-square&logo=javascript&logoColor=c9a84c) | Full-Stack |
+| 🤝 [NBOS-Skill-swap](https://github.com/Aakashxnoir/NBOS-Skill-swap-) | Platform where people can share or swap skills with each other | ![JS](https://img.shields.io/badge/JavaScript-0D0D0D?style=flat-square&logo=javascript&logoColor=c9a84c) | Web App |
+| 🔍 [Geeks-for-Geeks](https://github.com/Aakashxnoir/Geeks-for-Geeks-) | DSA practice & problem-solving repo | ![TS](https://img.shields.io/badge/TypeScript-0D0D0D?style=flat-square&logo=typescript&logoColor=c9a84c) | Practice |
+| 🎮 [Naruto-Dodge-Game](https://github.com/Aakashxnoir/Naruto-Dodge-Game-) | Simple arcade-style dodge game | ![Py](https://img.shields.io/badge/Python-0D0D0D?style=flat-square&logo=python&logoColor=c9a84c) | Game |
 | 🔒 [Landroid_Analysis_App](https://github.com/Aakashxnoir/Landroid_Analysis-App) | Analysis tool for Android-related data | ![TS](https://img.shields.io/badge/TypeScript-0D0D0D?style=flat-square&logo=typescript&logoColor=c9a84c) | Private |
 | 🌐 [College-Productivity-OS](https://github.com/Aakashxnoir/College-Productivity-OS-) | All-in-one productivity system for college life | ![JS](https://img.shields.io/badge/JavaScript-0D0D0D?style=flat-square&logo=javascript&logoColor=c9a84c) | Full-Stack |
 | ✅ [Smart-To-Do-app](https://github.com/Aakashxnoir/Smart-To-Do-app-) | Task manager with smart prioritization | ![TS](https://img.shields.io/badge/TypeScript-0D0D0D?style=flat-square&logo=typescript&logoColor=c9a84c) | Productivity |
 | 📚 [Student-Library-Management](https://github.com/Aakashxnoir/Student-Library-management-) | Library catalog & lending system | ![Java](https://img.shields.io/badge/Java-0D0D0D?style=flat-square&logo=openjdk&logoColor=c9a84c) | Full-Stack |
 | 🌍 [Sevagan-Multilingual-Service-app](https://github.com/Aakashxnoir/Sevagan---Multilingual-Service-app) | Multilingual public service access app | ![TS](https://img.shields.io/badge/TypeScript-0D0D0D?style=flat-square&logo=typescript&logoColor=c9a84c) | Web App |
 | 🎌 [Anime-Gallery](https://github.com/Aakashxnoir/Anime-Gallery) | Browsable anime image gallery | ![TS](https://img.shields.io/badge/TypeScript-0D0D0D?style=flat-square&logo=typescript&logoColor=c9a84c) | Fun |
-| 🎮 [Naruto-Dodge-Game](https://github.com/Aakashxnoir/Naruto-Dodge-Game-) | Arcade-style dodge game | ![Py](https://img.shields.io/badge/Python-0D0D0D?style=flat-square&logo=python&logoColor=c9a84c) | Game |
 | 💬 [Quote-Generator](https://github.com/Aakashxnoir/Quote-Generator) | Random quote generator utility | ![JS](https://img.shields.io/badge/JavaScript-0D0D0D?style=flat-square&logo=javascript&logoColor=c9a84c) | Tool |
+
+> 📌 Pinned on profile: `life-tracker` · `NBOS-Skill-swap` · `Geeks-for-Geeks` · `Naruto-Dodge-Game`
 
 ---
 
@@ -93,18 +97,16 @@
 </div>
 
 <div align="center">
-<img src="https://streak-stats.demolab.com?user=Aakashxnoir&theme=dark&hide_border=true&background=0D0D0D&ring=c9a84c&fire=c9a84c&currStreakLabel=c9a84c&sideLabels=c9a84c&dates=888888&stroke=c9a84c" width="100%" />
-</div>
-
-<div align="center">
 <img src="https://github-profile-trophy.vercel.app/?username=Aakashxnoir&theme=darkhub&no-frame=true&no-bg=true&row=1&column=6&margin-w=8" width="100%" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Aakashxnoir&theme=react-dark&bg_color=0D0D0D&color=c9a84c&line=c9a84c&point=FFFFFF&area=true&hide_border=true" width="100%" />
+  <img src="https://raw.githubusercontent.com/Aakashxnoir/Aakashxnoir/output/github-contribution-grid-snake-dark.svg" width="100%" />
 </div>
+
+<sub>⚠️ snake image only appears once the `snake.yml` workflow below has run at least once — see setup note.</sub>
 
 ---
 
@@ -120,3 +122,39 @@
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&height=100&color=0D0D0D&section=footer&text=in%20the%20noir%20%E2%80%94%20every%20bug%20is%20a%20clue%2C%20every%20commit%2C%20a%20confession.&fontColor=444444&fontSize=13&fontAlignY=65" width="100%"/>
 </p>
+
+snake.yml — put this at .github/workflows/snake.yml in the same repo:
+
+yaml
+name: Generate Snake
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # runs every 6 hours
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate snake game from GitHub contribution grid
+        uses: Platane/snk@v3
+        with:
+          github_user_name: Aakashxnoir
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - name: Push generated files to the output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
