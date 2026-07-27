@@ -58,14 +58,12 @@
 ---
 
 ## `🎯 focus`
-
 ╔══════════════════════════════════════════════════════════╗
-║ ▸ Building full-stack productivity systems ║
-║ ▸ Crafting multilingual & accessible web apps ║
-║ ▸ Turning ideas into shipped products ║
-║ ▸ Clean code, darker aesthetics ║
+║  ▸  Building full-stack productivity systems             ║
+║  ▸  Crafting multilingual & accessible web apps          ║
+║  ▸  Turning ideas into shipped products                  ║
+║  ▸  Clean code, darker aesthetics                        ║
 ╚══════════════════════════════════════════════════════════╝
-
 
 ---
 
@@ -122,39 +120,3 @@
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&height=100&color=0D0D0D&section=footer&text=in%20the%20noir%20%E2%80%94%20every%20bug%20is%20a%20clue%2C%20every%20commit%2C%20a%20confession.&fontColor=444444&fontSize=13&fontAlignY=65" width="100%"/>
 </p>
-
-snake.yml — put this at .github/workflows/snake.yml in the same repo:
-
-yaml
-name: Generate Snake
-
-on:
-  schedule:
-    - cron: "0 */6 * * *"   # runs every 6 hours
-  workflow_dispatch: {}
-  push:
-    branches:
-      - main
-
-permissions:
-  contents: write
-
-jobs:
-  generate:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Generate snake game from GitHub contribution grid
-        uses: Platane/snk@v3
-        with:
-          github_user_name: Aakashxnoir
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-
-      - name: Push generated files to the output branch
-        uses: crazy-max/ghaction-github-pages@v4
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
