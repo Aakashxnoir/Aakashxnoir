@@ -7,6 +7,7 @@ Supports STATIC=1 for frozen frame rendering.
 
 import os
 import sys
+import html
 
 DEFAULT_OUTPUT_PATH = "info-card.svg"
 
@@ -73,12 +74,14 @@ def generate_info_card(output_path: str = DEFAULT_OUTPUT_PATH):
         itype = item.get("type", "kv")
 
         if itype == "header":
+            u_esc = html.escape(item["user"])
+            h_esc = html.escape(item["host"])
             rendered_elements.append(
                 f'  <g class="{cls}" transform="translate(32, {curr_y})">\n'
                 f'    <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="bold">\n'
-                f'      <tspan fill="#7ee787">{item["user"]}</tspan>\n'
+                f'      <tspan fill="#7ee787">{u_esc}</tspan>\n'
                 f'      <tspan fill="#8b949e">@</tspan>\n'
-                f'      <tspan fill="#58a6ff">{item["host"]}</tspan>\n'
+                f'      <tspan fill="#58a6ff">{h_esc}</tspan>\n'
                 f'    </text>\n'
                 f'  </g>'
             )
@@ -112,9 +115,9 @@ def generate_info_card(output_path: str = DEFAULT_OUTPUT_PATH):
             )
             curr_y += 36
         else:
-            # Key-value row
-            key = item["key"]
-            val = item["val"]
+            # Key-value row with strict XML escaping
+            key = html.escape(item["key"])
+            val = html.escape(item["val"])
             val_col = item["val_color"]
             rendered_elements.append(
                 f'  <g class="{cls}" transform="translate(32, {curr_y})">\n'

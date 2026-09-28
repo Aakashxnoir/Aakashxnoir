@@ -31,24 +31,23 @@ def generate_ascii_svg(input_path: str = DEFAULT_INPUT, output_path: str = DEFAU
     svg_width = 370
     svg_height = 440
 
-    # Grid calculation:
-    # Monospace font metrics: width ~ 4.2px, height ~ 7.5px
+    # Typography & aspect ratio metrics
     char_w = 4.3
     row_height = 7.6
     font_size = 7.1
+    char_aspect = char_w / row_height # ~0.5658
 
-    # Available box inside terminal frame:
-    # Width: 370, leaving 20px padding on each side -> max content width ~ 330px
-    # 330 / 4.3 ~= 76 cols
+    # Grid columns target ~76 to fill card width with balanced padding
     grid_cols = 76
-    # Height: 440, header occupies 46px, footer 20px -> available 374px
-    # 374 / 7.6 ~= 48 rows
-    grid_rows = 48
+    img_aspect = img.width / max(1, img.height)
+    # Proportional rows to preserve exact aspect ratio without stretching
+    grid_rows = int(round(grid_cols * char_aspect / img_aspect))
+    grid_rows = max(36, min(48, grid_rows))
 
     resized = img.resize((grid_cols, grid_rows), Image.Resampling.LANCZOS)
     arr = np.array(resized)
 
-    # Convert pixels to ASCII
+    # Convert pixels to ASCII glyphs
     ascii_rows = []
     ramp_len = len(RAMP)
     for r in range(grid_rows):
@@ -62,7 +61,10 @@ def generate_ascii_svg(input_path: str = DEFAULT_INPUT, output_path: str = DEFAU
 
     content_width = round(grid_cols * char_w, 1)
     content_x = round((svg_width - content_width) / 2.0, 1)
-    start_y = 52.0
+
+    total_content_height = grid_rows * row_height
+    # Vertically center text area between header (y=42) and bottom (y=430)
+    start_y = round(42 + (390 - total_content_height) / 2.0, 1)
 
     # Animation timing
     total_time = 2.4

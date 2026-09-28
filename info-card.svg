@@ -76,14 +76,14 @@
     <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
       <tspan fill="#c9a84c" font-weight="600">Role       </tspan>
       <tspan fill="#484f58"> : </tspan>
-      <tspan fill="#c9a84c">Full-Stack Dev & AI Builder</tspan>
+      <tspan fill="#c9a84c">Full-Stack Dev &amp; AI Builder</tspan>
     </text>
   </g>
   <g class="line l-5" transform="translate(32, 179)">
     <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
       <tspan fill="#c9a84c" font-weight="600">Now        </tspan>
       <tspan fill="#484f58"> : </tspan>
-      <tspan fill="#e6edf3">Shipping productivity systems & AI tools</tspan>
+      <tspan fill="#e6edf3">Shipping productivity systems &amp; AI tools</tspan>
     </text>
   </g>
   <g class="line l-6" transform="translate(32, 203)">
