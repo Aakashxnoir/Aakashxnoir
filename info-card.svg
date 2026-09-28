@@ -4,18 +4,14 @@
     @keyframes lineFadeIn {
       0% {
         opacity: 0;
-        transform: translateX(-12px);
       }
       100% {
         opacity: 1;
-        transform: translateX(0);
       }
     }
     .line {
       opacity: 0;
       animation: lineFadeIn 0.38s ease-out forwards;
-      transform-box: fill-box;
-      transform-origin: left center;
     }
 
     .l-0 { animation-delay: 0.12s; }

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Generate a neofetch-style info card as an animated SVG (info-card.svg).
-Fades and slides in line-by-line using CSS keyframes and staggers.
+Fades in line-by-line using opacity keyframes and staggers (no transform collision).
 Supports STATIC=1 for frozen frame rendering.
 """
 
@@ -17,7 +17,6 @@ def generate_info_card(output_path: str = DEFAULT_OUTPUT_PATH):
     width = 490
     height = 440
 
-    # Key-value rows to render in neofetch format
     lines_data = [
         {"type": "header", "user": "aakash", "host": "noir-system"},
         {"type": "divider"},
@@ -34,7 +33,6 @@ def generate_info_card(output_path: str = DEFAULT_OUTPUT_PATH):
         {"type": "palette"}
     ]
 
-    # Staggered animation setup
     css_rules = []
     if is_static:
         css_rules.append(".line { opacity: 1; }")
@@ -43,18 +41,14 @@ def generate_info_card(output_path: str = DEFAULT_OUTPUT_PATH):
     @keyframes lineFadeIn {
       0% {
         opacity: 0;
-        transform: translateX(-12px);
       }
       100% {
         opacity: 1;
-        transform: translateX(0);
       }
     }
     .line {
       opacity: 0;
       animation: lineFadeIn 0.38s ease-out forwards;
-      transform-box: fill-box;
-      transform-origin: left center;
     }
 """)
         for idx in range(len(lines_data)):
@@ -63,7 +57,6 @@ def generate_info_card(output_path: str = DEFAULT_OUTPUT_PATH):
 
     css_block = "\n".join(css_rules)
 
-    # Render lines
     rendered_elements = []
     start_y = 65
     line_height = 24
@@ -96,7 +89,6 @@ def generate_info_card(output_path: str = DEFAULT_OUTPUT_PATH):
         elif itype == "spacer":
             curr_y += 12
         elif itype == "palette":
-            # Neofetch 8 color blocks
             colors_row1 = ["#0d1117", "#ff7b72", "#7ee787", "#d29922", "#58a6ff", "#bc8cff", "#39c5cf", "#e6edf3"]
             colors_row2 = ["#484f58", "#ffa198", "#56d364", "#e3b341", "#79c0ff", "#d2a8ff", "#56d4dd", "#ffffff"]
             
@@ -115,7 +107,6 @@ def generate_info_card(output_path: str = DEFAULT_OUTPUT_PATH):
             )
             curr_y += 36
         else:
-            # Key-value row with strict XML escaping
             key = html.escape(item["key"])
             val = html.escape(item["val"])
             val_col = item["val_color"]

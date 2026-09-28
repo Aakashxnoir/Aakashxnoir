@@ -5,8 +5,8 @@
   <h3><code>aakash@github ~ $ whoami</code></h3>
   <table>
     <tr>
-      <td valign="top"><img src="./avi-ascii.svg" width="370" alt="Aakash ASCII Portrait" /></td>
-      <td valign="top"><img src="./info-card.svg" width="490" alt="Aakash Terminal Info Card" /></td>
+      <td valign="top"><img src="./avi-ascii.svg" width="300" alt="Aakash — ASCII Portrait" /></td>
+      <td valign="top"><img src="./wordmark.svg" width="560" alt="AAKASH — 3D ASCII Wordmark" /></td>
     </tr>
   </table>
 </div>
