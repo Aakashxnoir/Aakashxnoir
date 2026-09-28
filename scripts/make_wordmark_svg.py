@@ -15,12 +15,11 @@ from PIL import Image, ImageDraw, ImageFont
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
-# Font selection: OpenSans-CondensedExtraBold gives thick, clean, tall glyphs for 6-letter names
 DEFAULT_FONTS = [
-    "/usr/share/fonts/TTF/OpenSans-CondensedExtraBold.ttf",
+    "/usr/share/fonts/TTF/FiraSansCondensed-Bold.ttf",
+    "/usr/share/fonts/TTF/FiraSans-Bold.ttf",
     "/usr/share/fonts/TTF/OpenSans-CondensedBold.ttf",
     "/usr/share/fonts/TTF/DejaVuSansCondensed-Bold.ttf",
-    "/usr/share/fonts/TTF/DejaVuSans-Bold.ttf",
 ]
 FONT_PATH = os.environ.get("WORDMARK_FONT")
 if not FONT_PATH or not os.path.exists(FONT_PATH):
@@ -32,29 +31,29 @@ if not FONT_PATH or not os.path.exists(FONT_PATH):
 FONT_INDEX = int(os.environ.get("WORDMARK_FONT_INDEX", 0))
 TEXT = os.environ.get("WORDMARK_TEXT", "AAKASH")
 
-COLS = int(os.environ.get("WORDMARK_COLS", 83))
-ROW_MARGIN = int(os.environ.get("WORDMARK_ROW_MARGIN", 7))
+COLS = int(os.environ.get("WORDMARK_COLS", 84))
+ROW_MARGIN = int(os.environ.get("WORDMARK_ROW_MARGIN", 8))
 ROWS = 0  # Computed dynamically in fit()
 
 CELL_W = float(os.environ.get("WORDMARK_CELL_W", 6.8))
-CELL_H = float(os.environ.get("WORDMARK_CELL_H", 14.6))
+CELL_H = float(os.environ.get("WORDMARK_CELL_H", 14.5))
 
 MASK_H = 300
-TRACKING = float(os.environ.get("WORDMARK_TRACKING", 0.16))
+TRACKING = float(os.environ.get("WORDMARK_TRACKING", 0.30))
 LINE_GAP = 1.20
-DEPTH_FRAC = 0.35
-TILT_DEG = float(os.environ.get("WORDMARK_TILT", 4.0))
+DEPTH_FRAC = float(os.environ.get("WORDMARK_DEPTH", 0.18))
+TILT_DEG = float(os.environ.get("WORDMARK_TILT", 3.5))
 
 CAM_DIST = 6.2
 FOCAL = 4.15
-FIT = float(os.environ.get("WORDMARK_FIT", 0.88))
+FIT = float(os.environ.get("WORDMARK_FIT", 0.82))
 
 RAMP = " .`:-=+*csS#%@"
 
 LIGHT = np.array([-0.15, -0.45, -1.00])
 LIGHT = LIGHT / np.linalg.norm(LIGHT)
-AMBIENT = 0.22
-FOG = 0.34
+AMBIENT = 0.25
+FOG = 0.30
 FOG_SPAN = 0.55
 
 # Palette
@@ -106,7 +105,7 @@ def build_shell():
     mask = mask[ys_any[0]:ys_any[-1] + 1, xs_any[0]:xs_any[-1] + 1]
 
     H, W = mask.shape
-    depth = max(4, int(round(H * DEPTH_FRAC)))
+    depth = max(3, int(round(H * DEPTH_FRAC)))
     cy, cx = np.nonzero(mask)
 
     pts, nrm = [], []
