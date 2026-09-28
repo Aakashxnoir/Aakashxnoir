@@ -1,0 +1,519 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 210" width="860" height="210">
+  <style>
+
+    @keyframes reveal {
+      0% {
+        opacity: 0;
+        transform: translateY(-5px) scale(0.85);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+    .cell {
+      opacity: 0;
+      animation: reveal 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+    .cell:hover {
+      stroke: #58a6ff;
+      stroke-width: 1.5px;
+      cursor: pointer;
+    }
+
+    .d-0 { animation-delay: 0.0s; }
+    .d-1 { animation-delay: 0.022s; }
+    .d-2 { animation-delay: 0.044s; }
+    .d-3 { animation-delay: 0.066s; }
+    .d-4 { animation-delay: 0.088s; }
+    .d-5 { animation-delay: 0.11s; }
+    .d-6 { animation-delay: 0.132s; }
+    .d-7 { animation-delay: 0.154s; }
+    .d-8 { animation-delay: 0.176s; }
+    .d-9 { animation-delay: 0.198s; }
+    .d-10 { animation-delay: 0.22s; }
+    .d-11 { animation-delay: 0.242s; }
+    .d-12 { animation-delay: 0.264s; }
+    .d-13 { animation-delay: 0.286s; }
+    .d-14 { animation-delay: 0.308s; }
+    .d-15 { animation-delay: 0.33s; }
+    .d-16 { animation-delay: 0.352s; }
+    .d-17 { animation-delay: 0.374s; }
+    .d-18 { animation-delay: 0.396s; }
+    .d-19 { animation-delay: 0.418s; }
+    .d-20 { animation-delay: 0.44s; }
+    .d-21 { animation-delay: 0.462s; }
+    .d-22 { animation-delay: 0.484s; }
+    .d-23 { animation-delay: 0.506s; }
+    .d-24 { animation-delay: 0.528s; }
+    .d-25 { animation-delay: 0.55s; }
+    .d-26 { animation-delay: 0.572s; }
+    .d-27 { animation-delay: 0.594s; }
+    .d-28 { animation-delay: 0.616s; }
+    .d-29 { animation-delay: 0.638s; }
+    .d-30 { animation-delay: 0.66s; }
+    .d-31 { animation-delay: 0.682s; }
+    .d-32 { animation-delay: 0.704s; }
+    .d-33 { animation-delay: 0.726s; }
+    .d-34 { animation-delay: 0.748s; }
+    .d-35 { animation-delay: 0.77s; }
+    .d-36 { animation-delay: 0.792s; }
+    .d-37 { animation-delay: 0.814s; }
+    .d-38 { animation-delay: 0.836s; }
+    .d-39 { animation-delay: 0.858s; }
+    .d-40 { animation-delay: 0.88s; }
+    .d-41 { animation-delay: 0.902s; }
+    .d-42 { animation-delay: 0.924s; }
+    .d-43 { animation-delay: 0.946s; }
+    .d-44 { animation-delay: 0.968s; }
+    .d-45 { animation-delay: 0.99s; }
+    .d-46 { animation-delay: 1.012s; }
+    .d-47 { animation-delay: 1.034s; }
+    .d-48 { animation-delay: 1.056s; }
+    .d-49 { animation-delay: 1.078s; }
+    .d-50 { animation-delay: 1.1s; }
+    .d-51 { animation-delay: 1.122s; }
+    .d-52 { animation-delay: 1.144s; }
+    .d-53 { animation-delay: 1.166s; }
+    .d-54 { animation-delay: 1.188s; }
+    .d-55 { animation-delay: 1.21s; }
+    .d-56 { animation-delay: 1.232s; }
+    .d-57 { animation-delay: 1.254s; }
+    .d-58 { animation-delay: 1.276s; }
+    .header-text {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 12px;
+      fill: #8b949e;
+    }
+    .stat-bold {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      fill: #e6edf3;
+    }
+    .stat-muted {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      fill: #7d8590;
+    }
+  </style>
+
+  <!-- Container Box -->
+  <rect x="0.5" y="0.5" width="859" height="209" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1" />
+
+  <!-- Terminal Top Bar -->
+  <circle cx="22" cy="22" r="5" fill="#ff5f56" />
+  <circle cx="38" cy="22" r="5" fill="#ffbd2e" />
+  <circle cx="54" cy="22" r="5" fill="#27c93f" />
+  <text x="74" y="26" class="header-text">github.com/Aakashxnoir ~ contribution_matrix.sh</text>
+
+  <!-- Month Labels -->
+    <text x="68" y="52" fill="#7d8590" font-size="10" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Sep</text>
+    <text x="138" y="52" fill="#7d8590" font-size="10" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Nov</text>
+    <text x="208" y="52" fill="#7d8590" font-size="10" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Dec</text>
+    <text x="264" y="52" fill="#7d8590" font-size="10" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Jan</text>
+    <text x="320" y="52" fill="#7d8590" font-size="10" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Feb</text>
+    <text x="376" y="52" fill="#7d8590" font-size="10" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Mar</text>
+    <text x="446" y="52" fill="#7d8590" font-size="10" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Apr</text>
+    <text x="502" y="52" fill="#7d8590" font-size="10" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">May</text>
+    <text x="572" y="52" fill="#7d8590" font-size="10" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Jun</text>
+    <text x="628" y="52" fill="#7d8590" font-size="10" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Jul</text>
+    <text x="684" y="52" fill="#7d8590" font-size="10" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Aug</text>
+    <text x="754" y="52" fill="#7d8590" font-size="10" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Sep</text>
+
+  <!-- Weekday Labels -->
+    <text x="32" y="85" fill="#7d8590" font-size="9" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Mon</text>
+    <text x="32" y="113" fill="#7d8590" font-size="9" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Wed</text>
+    <text x="32" y="141" fill="#7d8590" font-size="9" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Fri</text>
+
+  <!-- Grid Cells -->
+    <rect class="cell d-0" x="68" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2025-09-28: No contributions</title></rect>
+    <rect class="cell d-1" x="68" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2025-09-29: No contributions</title></rect>
+    <rect class="cell d-2" x="68" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2025-09-30: No contributions</title></rect>
+    <rect class="cell d-3" x="68" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-01: No contributions</title></rect>
+    <rect class="cell d-4" x="68" y="118" width="11" height="11" rx="2" fill="#006d32"><title>2025-10-02: 2 contributions</title></rect>
+    <rect class="cell d-5" x="68" y="132" width="11" height="11" rx="2" fill="#0e4429"><title>2025-10-03: 1 contribution</title></rect>
+    <rect class="cell d-6" x="68" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-04: No contributions</title></rect>
+    <rect class="cell d-1" x="82" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-05: No contributions</title></rect>
+    <rect class="cell d-2" x="82" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-06: No contributions</title></rect>
+    <rect class="cell d-3" x="82" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-07: No contributions</title></rect>
+    <rect class="cell d-4" x="82" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-08: No contributions</title></rect>
+    <rect class="cell d-5" x="82" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-09: No contributions</title></rect>
+    <rect class="cell d-6" x="82" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-10: No contributions</title></rect>
+    <rect class="cell d-7" x="82" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-11: No contributions</title></rect>
+    <rect class="cell d-2" x="96" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-12: No contributions</title></rect>
+    <rect class="cell d-3" x="96" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-13: No contributions</title></rect>
+    <rect class="cell d-4" x="96" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-14: No contributions</title></rect>
+    <rect class="cell d-5" x="96" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-15: No contributions</title></rect>
+    <rect class="cell d-6" x="96" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-16: No contributions</title></rect>
+    <rect class="cell d-7" x="96" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-17: No contributions</title></rect>
+    <rect class="cell d-8" x="96" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-18: No contributions</title></rect>
+    <rect class="cell d-3" x="110" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-19: No contributions</title></rect>
+    <rect class="cell d-4" x="110" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-20: No contributions</title></rect>
+    <rect class="cell d-5" x="110" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-21: No contributions</title></rect>
+    <rect class="cell d-6" x="110" y="104" width="11" height="11" rx="2" fill="#006d32"><title>2025-10-22: 3 contributions</title></rect>
+    <rect class="cell d-7" x="110" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-23: No contributions</title></rect>
+    <rect class="cell d-8" x="110" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-24: No contributions</title></rect>
+    <rect class="cell d-9" x="110" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-25: No contributions</title></rect>
+    <rect class="cell d-4" x="124" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-26: No contributions</title></rect>
+    <rect class="cell d-5" x="124" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-27: No contributions</title></rect>
+    <rect class="cell d-6" x="124" y="90" width="11" height="11" rx="2" fill="#006d32"><title>2025-10-28: 2 contributions</title></rect>
+    <rect class="cell d-7" x="124" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-29: No contributions</title></rect>
+    <rect class="cell d-8" x="124" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-30: No contributions</title></rect>
+    <rect class="cell d-9" x="124" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2025-10-31: No contributions</title></rect>
+    <rect class="cell d-10" x="124" y="146" width="11" height="11" rx="2" fill="#006d32"><title>2025-11-01: 2 contributions</title></rect>
+    <rect class="cell d-5" x="138" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-02: No contributions</title></rect>
+    <rect class="cell d-6" x="138" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-03: No contributions</title></rect>
+    <rect class="cell d-7" x="138" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-04: No contributions</title></rect>
+    <rect class="cell d-8" x="138" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-05: No contributions</title></rect>
+    <rect class="cell d-9" x="138" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-06: No contributions</title></rect>
+    <rect class="cell d-10" x="138" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-07: No contributions</title></rect>
+    <rect class="cell d-11" x="138" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-08: No contributions</title></rect>
+    <rect class="cell d-6" x="152" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-09: No contributions</title></rect>
+    <rect class="cell d-7" x="152" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-10: No contributions</title></rect>
+    <rect class="cell d-8" x="152" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-11: No contributions</title></rect>
+    <rect class="cell d-9" x="152" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-12: No contributions</title></rect>
+    <rect class="cell d-10" x="152" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-13: No contributions</title></rect>
+    <rect class="cell d-11" x="152" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-14: No contributions</title></rect>
+    <rect class="cell d-12" x="152" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-15: No contributions</title></rect>
+    <rect class="cell d-7" x="166" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-16: No contributions</title></rect>
+    <rect class="cell d-8" x="166" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-17: No contributions</title></rect>
+    <rect class="cell d-9" x="166" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-18: No contributions</title></rect>
+    <rect class="cell d-10" x="166" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-19: No contributions</title></rect>
+    <rect class="cell d-11" x="166" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-20: No contributions</title></rect>
+    <rect class="cell d-12" x="166" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-21: No contributions</title></rect>
+    <rect class="cell d-13" x="166" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-22: No contributions</title></rect>
+    <rect class="cell d-8" x="180" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-23: No contributions</title></rect>
+    <rect class="cell d-9" x="180" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-24: No contributions</title></rect>
+    <rect class="cell d-10" x="180" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-25: No contributions</title></rect>
+    <rect class="cell d-11" x="180" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-26: No contributions</title></rect>
+    <rect class="cell d-12" x="180" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-27: No contributions</title></rect>
+    <rect class="cell d-13" x="180" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-28: No contributions</title></rect>
+    <rect class="cell d-14" x="180" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-29: No contributions</title></rect>
+    <rect class="cell d-9" x="194" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2025-11-30: No contributions</title></rect>
+    <rect class="cell d-10" x="194" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-01: No contributions</title></rect>
+    <rect class="cell d-11" x="194" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-02: No contributions</title></rect>
+    <rect class="cell d-12" x="194" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-03: No contributions</title></rect>
+    <rect class="cell d-13" x="194" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-04: No contributions</title></rect>
+    <rect class="cell d-14" x="194" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-05: No contributions</title></rect>
+    <rect class="cell d-15" x="194" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-06: No contributions</title></rect>
+    <rect class="cell d-10" x="208" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-07: No contributions</title></rect>
+    <rect class="cell d-11" x="208" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-08: No contributions</title></rect>
+    <rect class="cell d-12" x="208" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-09: No contributions</title></rect>
+    <rect class="cell d-13" x="208" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-10: No contributions</title></rect>
+    <rect class="cell d-14" x="208" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-11: No contributions</title></rect>
+    <rect class="cell d-15" x="208" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-12: No contributions</title></rect>
+    <rect class="cell d-16" x="208" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-13: No contributions</title></rect>
+    <rect class="cell d-11" x="222" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-14: No contributions</title></rect>
+    <rect class="cell d-12" x="222" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-15: No contributions</title></rect>
+    <rect class="cell d-13" x="222" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-16: No contributions</title></rect>
+    <rect class="cell d-14" x="222" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-17: No contributions</title></rect>
+    <rect class="cell d-15" x="222" y="118" width="11" height="11" rx="2" fill="#006d32"><title>2025-12-18: 2 contributions</title></rect>
+    <rect class="cell d-16" x="222" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-19: No contributions</title></rect>
+    <rect class="cell d-17" x="222" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-20: No contributions</title></rect>
+    <rect class="cell d-12" x="236" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-21: No contributions</title></rect>
+    <rect class="cell d-13" x="236" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-22: No contributions</title></rect>
+    <rect class="cell d-14" x="236" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-23: No contributions</title></rect>
+    <rect class="cell d-15" x="236" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-24: No contributions</title></rect>
+    <rect class="cell d-16" x="236" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-25: No contributions</title></rect>
+    <rect class="cell d-17" x="236" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-26: No contributions</title></rect>
+    <rect class="cell d-18" x="236" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-27: No contributions</title></rect>
+    <rect class="cell d-13" x="250" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-28: No contributions</title></rect>
+    <rect class="cell d-14" x="250" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-29: No contributions</title></rect>
+    <rect class="cell d-15" x="250" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-30: No contributions</title></rect>
+    <rect class="cell d-16" x="250" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2025-12-31: No contributions</title></rect>
+    <rect class="cell d-17" x="250" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-01: No contributions</title></rect>
+    <rect class="cell d-18" x="250" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-02: No contributions</title></rect>
+    <rect class="cell d-19" x="250" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-03: No contributions</title></rect>
+    <rect class="cell d-14" x="264" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-04: No contributions</title></rect>
+    <rect class="cell d-15" x="264" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-05: No contributions</title></rect>
+    <rect class="cell d-16" x="264" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-06: No contributions</title></rect>
+    <rect class="cell d-17" x="264" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-07: No contributions</title></rect>
+    <rect class="cell d-18" x="264" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-08: No contributions</title></rect>
+    <rect class="cell d-19" x="264" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-09: No contributions</title></rect>
+    <rect class="cell d-20" x="264" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-10: No contributions</title></rect>
+    <rect class="cell d-15" x="278" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-11: No contributions</title></rect>
+    <rect class="cell d-16" x="278" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-12: No contributions</title></rect>
+    <rect class="cell d-17" x="278" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-13: No contributions</title></rect>
+    <rect class="cell d-18" x="278" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-14: No contributions</title></rect>
+    <rect class="cell d-19" x="278" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-15: No contributions</title></rect>
+    <rect class="cell d-20" x="278" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-16: No contributions</title></rect>
+    <rect class="cell d-21" x="278" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-17: No contributions</title></rect>
+    <rect class="cell d-16" x="292" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-18: No contributions</title></rect>
+    <rect class="cell d-17" x="292" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-19: No contributions</title></rect>
+    <rect class="cell d-18" x="292" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-20: No contributions</title></rect>
+    <rect class="cell d-19" x="292" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-21: No contributions</title></rect>
+    <rect class="cell d-20" x="292" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-22: No contributions</title></rect>
+    <rect class="cell d-21" x="292" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-23: No contributions</title></rect>
+    <rect class="cell d-22" x="292" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-24: No contributions</title></rect>
+    <rect class="cell d-17" x="306" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-25: No contributions</title></rect>
+    <rect class="cell d-18" x="306" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-26: No contributions</title></rect>
+    <rect class="cell d-19" x="306" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-27: No contributions</title></rect>
+    <rect class="cell d-20" x="306" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-28: No contributions</title></rect>
+    <rect class="cell d-21" x="306" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-29: No contributions</title></rect>
+    <rect class="cell d-22" x="306" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-30: No contributions</title></rect>
+    <rect class="cell d-23" x="306" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-01-31: No contributions</title></rect>
+    <rect class="cell d-18" x="320" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-01: No contributions</title></rect>
+    <rect class="cell d-19" x="320" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-02: No contributions</title></rect>
+    <rect class="cell d-20" x="320" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-03: No contributions</title></rect>
+    <rect class="cell d-21" x="320" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-04: No contributions</title></rect>
+    <rect class="cell d-22" x="320" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-05: No contributions</title></rect>
+    <rect class="cell d-23" x="320" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-06: No contributions</title></rect>
+    <rect class="cell d-24" x="320" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-07: No contributions</title></rect>
+    <rect class="cell d-19" x="334" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-08: No contributions</title></rect>
+    <rect class="cell d-20" x="334" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-09: No contributions</title></rect>
+    <rect class="cell d-21" x="334" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-10: No contributions</title></rect>
+    <rect class="cell d-22" x="334" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-11: No contributions</title></rect>
+    <rect class="cell d-23" x="334" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-12: No contributions</title></rect>
+    <rect class="cell d-24" x="334" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-13: No contributions</title></rect>
+    <rect class="cell d-25" x="334" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-14: No contributions</title></rect>
+    <rect class="cell d-20" x="348" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-15: No contributions</title></rect>
+    <rect class="cell d-21" x="348" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-16: No contributions</title></rect>
+    <rect class="cell d-22" x="348" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-17: No contributions</title></rect>
+    <rect class="cell d-23" x="348" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-18: No contributions</title></rect>
+    <rect class="cell d-24" x="348" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-19: No contributions</title></rect>
+    <rect class="cell d-25" x="348" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-20: No contributions</title></rect>
+    <rect class="cell d-26" x="348" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-21: No contributions</title></rect>
+    <rect class="cell d-21" x="362" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-22: No contributions</title></rect>
+    <rect class="cell d-22" x="362" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-23: No contributions</title></rect>
+    <rect class="cell d-23" x="362" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-24: No contributions</title></rect>
+    <rect class="cell d-24" x="362" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-25: No contributions</title></rect>
+    <rect class="cell d-25" x="362" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-26: No contributions</title></rect>
+    <rect class="cell d-26" x="362" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-27: No contributions</title></rect>
+    <rect class="cell d-27" x="362" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-02-28: No contributions</title></rect>
+    <rect class="cell d-22" x="376" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-01: No contributions</title></rect>
+    <rect class="cell d-23" x="376" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-02: No contributions</title></rect>
+    <rect class="cell d-24" x="376" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-03: No contributions</title></rect>
+    <rect class="cell d-25" x="376" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-04: No contributions</title></rect>
+    <rect class="cell d-26" x="376" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-05: No contributions</title></rect>
+    <rect class="cell d-27" x="376" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-06: No contributions</title></rect>
+    <rect class="cell d-28" x="376" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-07: No contributions</title></rect>
+    <rect class="cell d-23" x="390" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-08: No contributions</title></rect>
+    <rect class="cell d-24" x="390" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-09: No contributions</title></rect>
+    <rect class="cell d-25" x="390" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-10: No contributions</title></rect>
+    <rect class="cell d-26" x="390" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-11: No contributions</title></rect>
+    <rect class="cell d-27" x="390" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-12: No contributions</title></rect>
+    <rect class="cell d-28" x="390" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-13: No contributions</title></rect>
+    <rect class="cell d-29" x="390" y="146" width="11" height="11" rx="2" fill="#0e4429"><title>2026-03-14: 1 contribution</title></rect>
+    <rect class="cell d-24" x="404" y="62" width="11" height="11" rx="2" fill="#006d32"><title>2026-03-15: 2 contributions</title></rect>
+    <rect class="cell d-25" x="404" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-16: No contributions</title></rect>
+    <rect class="cell d-26" x="404" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-17: No contributions</title></rect>
+    <rect class="cell d-27" x="404" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-18: No contributions</title></rect>
+    <rect class="cell d-28" x="404" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-19: No contributions</title></rect>
+    <rect class="cell d-29" x="404" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-20: No contributions</title></rect>
+    <rect class="cell d-30" x="404" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-21: No contributions</title></rect>
+    <rect class="cell d-25" x="418" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-22: No contributions</title></rect>
+    <rect class="cell d-26" x="418" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-23: No contributions</title></rect>
+    <rect class="cell d-27" x="418" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-24: No contributions</title></rect>
+    <rect class="cell d-28" x="418" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-25: No contributions</title></rect>
+    <rect class="cell d-29" x="418" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-26: No contributions</title></rect>
+    <rect class="cell d-30" x="418" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-27: No contributions</title></rect>
+    <rect class="cell d-31" x="418" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-28: No contributions</title></rect>
+    <rect class="cell d-26" x="432" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-29: No contributions</title></rect>
+    <rect class="cell d-27" x="432" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-30: No contributions</title></rect>
+    <rect class="cell d-28" x="432" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-03-31: No contributions</title></rect>
+    <rect class="cell d-29" x="432" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-01: No contributions</title></rect>
+    <rect class="cell d-30" x="432" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-02: No contributions</title></rect>
+    <rect class="cell d-31" x="432" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-03: No contributions</title></rect>
+    <rect class="cell d-32" x="432" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-04: No contributions</title></rect>
+    <rect class="cell d-27" x="446" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-05: No contributions</title></rect>
+    <rect class="cell d-28" x="446" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-06: No contributions</title></rect>
+    <rect class="cell d-29" x="446" y="90" width="11" height="11" rx="2" fill="#006d32"><title>2026-04-07: 3 contributions</title></rect>
+    <rect class="cell d-30" x="446" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-08: No contributions</title></rect>
+    <rect class="cell d-31" x="446" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-09: No contributions</title></rect>
+    <rect class="cell d-32" x="446" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-10: No contributions</title></rect>
+    <rect class="cell d-33" x="446" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-11: No contributions</title></rect>
+    <rect class="cell d-28" x="460" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-12: No contributions</title></rect>
+    <rect class="cell d-29" x="460" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-13: No contributions</title></rect>
+    <rect class="cell d-30" x="460" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-14: No contributions</title></rect>
+    <rect class="cell d-31" x="460" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-15: No contributions</title></rect>
+    <rect class="cell d-32" x="460" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-16: No contributions</title></rect>
+    <rect class="cell d-33" x="460" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-17: No contributions</title></rect>
+    <rect class="cell d-34" x="460" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-18: No contributions</title></rect>
+    <rect class="cell d-29" x="474" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-19: No contributions</title></rect>
+    <rect class="cell d-30" x="474" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-20: No contributions</title></rect>
+    <rect class="cell d-31" x="474" y="90" width="11" height="11" rx="2" fill="#69f0a0"><title>2026-04-21: 10 contributions</title></rect>
+    <rect class="cell d-32" x="474" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-22: No contributions</title></rect>
+    <rect class="cell d-33" x="474" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-23: No contributions</title></rect>
+    <rect class="cell d-34" x="474" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-24: No contributions</title></rect>
+    <rect class="cell d-35" x="474" y="146" width="11" height="11" rx="2" fill="#0e4429"><title>2026-04-25: 1 contribution</title></rect>
+    <rect class="cell d-30" x="488" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-26: No contributions</title></rect>
+    <rect class="cell d-31" x="488" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-27: No contributions</title></rect>
+    <rect class="cell d-32" x="488" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-28: No contributions</title></rect>
+    <rect class="cell d-33" x="488" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-29: No contributions</title></rect>
+    <rect class="cell d-34" x="488" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-04-30: No contributions</title></rect>
+    <rect class="cell d-35" x="488" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-01: No contributions</title></rect>
+    <rect class="cell d-36" x="488" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-02: No contributions</title></rect>
+    <rect class="cell d-31" x="502" y="62" width="11" height="11" rx="2" fill="#0e4429"><title>2026-05-03: 1 contribution</title></rect>
+    <rect class="cell d-32" x="502" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-04: No contributions</title></rect>
+    <rect class="cell d-33" x="502" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-05: No contributions</title></rect>
+    <rect class="cell d-34" x="502" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-06: No contributions</title></rect>
+    <rect class="cell d-35" x="502" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-07: No contributions</title></rect>
+    <rect class="cell d-36" x="502" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-08: No contributions</title></rect>
+    <rect class="cell d-37" x="502" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-09: No contributions</title></rect>
+    <rect class="cell d-32" x="516" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-10: No contributions</title></rect>
+    <rect class="cell d-33" x="516" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-11: No contributions</title></rect>
+    <rect class="cell d-34" x="516" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-12: No contributions</title></rect>
+    <rect class="cell d-35" x="516" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-13: No contributions</title></rect>
+    <rect class="cell d-36" x="516" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-14: No contributions</title></rect>
+    <rect class="cell d-37" x="516" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-15: No contributions</title></rect>
+    <rect class="cell d-38" x="516" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-16: No contributions</title></rect>
+    <rect class="cell d-33" x="530" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-17: No contributions</title></rect>
+    <rect class="cell d-34" x="530" y="76" width="11" height="11" rx="2" fill="#26a641"><title>2026-05-18: 4 contributions</title></rect>
+    <rect class="cell d-35" x="530" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-19: No contributions</title></rect>
+    <rect class="cell d-36" x="530" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-20: No contributions</title></rect>
+    <rect class="cell d-37" x="530" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-21: No contributions</title></rect>
+    <rect class="cell d-38" x="530" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-22: No contributions</title></rect>
+    <rect class="cell d-39" x="530" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-23: No contributions</title></rect>
+    <rect class="cell d-34" x="544" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-24: No contributions</title></rect>
+    <rect class="cell d-35" x="544" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-25: No contributions</title></rect>
+    <rect class="cell d-36" x="544" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-26: No contributions</title></rect>
+    <rect class="cell d-37" x="544" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-27: No contributions</title></rect>
+    <rect class="cell d-38" x="544" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-28: No contributions</title></rect>
+    <rect class="cell d-39" x="544" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-29: No contributions</title></rect>
+    <rect class="cell d-40" x="544" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-30: No contributions</title></rect>
+    <rect class="cell d-35" x="558" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-05-31: No contributions</title></rect>
+    <rect class="cell d-36" x="558" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-01: No contributions</title></rect>
+    <rect class="cell d-37" x="558" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-02: No contributions</title></rect>
+    <rect class="cell d-38" x="558" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-03: No contributions</title></rect>
+    <rect class="cell d-39" x="558" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-04: No contributions</title></rect>
+    <rect class="cell d-40" x="558" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-05: No contributions</title></rect>
+    <rect class="cell d-41" x="558" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-06: No contributions</title></rect>
+    <rect class="cell d-36" x="572" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-07: No contributions</title></rect>
+    <rect class="cell d-37" x="572" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-08: No contributions</title></rect>
+    <rect class="cell d-38" x="572" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-09: No contributions</title></rect>
+    <rect class="cell d-39" x="572" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-10: No contributions</title></rect>
+    <rect class="cell d-40" x="572" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-11: No contributions</title></rect>
+    <rect class="cell d-41" x="572" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-12: No contributions</title></rect>
+    <rect class="cell d-42" x="572" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-13: No contributions</title></rect>
+    <rect class="cell d-37" x="586" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-14: No contributions</title></rect>
+    <rect class="cell d-38" x="586" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-15: No contributions</title></rect>
+    <rect class="cell d-39" x="586" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-16: No contributions</title></rect>
+    <rect class="cell d-40" x="586" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-17: No contributions</title></rect>
+    <rect class="cell d-41" x="586" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-18: No contributions</title></rect>
+    <rect class="cell d-42" x="586" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-19: No contributions</title></rect>
+    <rect class="cell d-43" x="586" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-20: No contributions</title></rect>
+    <rect class="cell d-38" x="600" y="62" width="11" height="11" rx="2" fill="#006d32"><title>2026-06-21: 3 contributions</title></rect>
+    <rect class="cell d-39" x="600" y="76" width="11" height="11" rx="2" fill="#006d32"><title>2026-06-22: 3 contributions</title></rect>
+    <rect class="cell d-40" x="600" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-23: No contributions</title></rect>
+    <rect class="cell d-41" x="600" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-24: No contributions</title></rect>
+    <rect class="cell d-42" x="600" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-25: No contributions</title></rect>
+    <rect class="cell d-43" x="600" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-26: No contributions</title></rect>
+    <rect class="cell d-44" x="600" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-27: No contributions</title></rect>
+    <rect class="cell d-39" x="614" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-28: No contributions</title></rect>
+    <rect class="cell d-40" x="614" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-29: No contributions</title></rect>
+    <rect class="cell d-41" x="614" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-06-30: No contributions</title></rect>
+    <rect class="cell d-42" x="614" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-01: No contributions</title></rect>
+    <rect class="cell d-43" x="614" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-02: No contributions</title></rect>
+    <rect class="cell d-44" x="614" y="132" width="11" height="11" rx="2" fill="#006d32"><title>2026-07-03: 2 contributions</title></rect>
+    <rect class="cell d-45" x="614" y="146" width="11" height="11" rx="2" fill="#39d353"><title>2026-07-04: 7 contributions</title></rect>
+    <rect class="cell d-40" x="628" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-05: No contributions</title></rect>
+    <rect class="cell d-41" x="628" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-06: No contributions</title></rect>
+    <rect class="cell d-42" x="628" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-07: No contributions</title></rect>
+    <rect class="cell d-43" x="628" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-08: No contributions</title></rect>
+    <rect class="cell d-44" x="628" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-09: No contributions</title></rect>
+    <rect class="cell d-45" x="628" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-10: No contributions</title></rect>
+    <rect class="cell d-46" x="628" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-11: No contributions</title></rect>
+    <rect class="cell d-41" x="642" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-12: No contributions</title></rect>
+    <rect class="cell d-42" x="642" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-13: No contributions</title></rect>
+    <rect class="cell d-43" x="642" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-14: No contributions</title></rect>
+    <rect class="cell d-44" x="642" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-15: No contributions</title></rect>
+    <rect class="cell d-45" x="642" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-16: No contributions</title></rect>
+    <rect class="cell d-46" x="642" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-17: No contributions</title></rect>
+    <rect class="cell d-47" x="642" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-18: No contributions</title></rect>
+    <rect class="cell d-42" x="656" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-19: No contributions</title></rect>
+    <rect class="cell d-43" x="656" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-20: No contributions</title></rect>
+    <rect class="cell d-44" x="656" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-21: No contributions</title></rect>
+    <rect class="cell d-45" x="656" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-22: No contributions</title></rect>
+    <rect class="cell d-46" x="656" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-23: No contributions</title></rect>
+    <rect class="cell d-47" x="656" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-24: No contributions</title></rect>
+    <rect class="cell d-48" x="656" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-25: No contributions</title></rect>
+    <rect class="cell d-43" x="670" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-26: No contributions</title></rect>
+    <rect class="cell d-44" x="670" y="76" width="11" height="11" rx="2" fill="#006d32"><title>2026-07-27: 3 contributions</title></rect>
+    <rect class="cell d-45" x="670" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-28: No contributions</title></rect>
+    <rect class="cell d-46" x="670" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-29: No contributions</title></rect>
+    <rect class="cell d-47" x="670" y="118" width="11" height="11" rx="2" fill="#0e4429"><title>2026-07-30: 1 contribution</title></rect>
+    <rect class="cell d-48" x="670" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-07-31: No contributions</title></rect>
+    <rect class="cell d-49" x="670" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-01: No contributions</title></rect>
+    <rect class="cell d-44" x="684" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-02: No contributions</title></rect>
+    <rect class="cell d-45" x="684" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-03: No contributions</title></rect>
+    <rect class="cell d-46" x="684" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-04: No contributions</title></rect>
+    <rect class="cell d-47" x="684" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-05: No contributions</title></rect>
+    <rect class="cell d-48" x="684" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-06: No contributions</title></rect>
+    <rect class="cell d-49" x="684" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-07: No contributions</title></rect>
+    <rect class="cell d-50" x="684" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-08: No contributions</title></rect>
+    <rect class="cell d-45" x="698" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-09: No contributions</title></rect>
+    <rect class="cell d-46" x="698" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-10: No contributions</title></rect>
+    <rect class="cell d-47" x="698" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-11: No contributions</title></rect>
+    <rect class="cell d-48" x="698" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-12: No contributions</title></rect>
+    <rect class="cell d-49" x="698" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-13: No contributions</title></rect>
+    <rect class="cell d-50" x="698" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-14: No contributions</title></rect>
+    <rect class="cell d-51" x="698" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-15: No contributions</title></rect>
+    <rect class="cell d-46" x="712" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-16: No contributions</title></rect>
+    <rect class="cell d-47" x="712" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-17: No contributions</title></rect>
+    <rect class="cell d-48" x="712" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-18: No contributions</title></rect>
+    <rect class="cell d-49" x="712" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-19: No contributions</title></rect>
+    <rect class="cell d-50" x="712" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-20: No contributions</title></rect>
+    <rect class="cell d-51" x="712" y="132" width="11" height="11" rx="2" fill="#39d353"><title>2026-08-21: 6 contributions</title></rect>
+    <rect class="cell d-52" x="712" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-22: No contributions</title></rect>
+    <rect class="cell d-47" x="726" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-23: No contributions</title></rect>
+    <rect class="cell d-48" x="726" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-24: No contributions</title></rect>
+    <rect class="cell d-49" x="726" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-25: No contributions</title></rect>
+    <rect class="cell d-50" x="726" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-26: No contributions</title></rect>
+    <rect class="cell d-51" x="726" y="118" width="11" height="11" rx="2" fill="#006d32"><title>2026-08-27: 2 contributions</title></rect>
+    <rect class="cell d-52" x="726" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-28: No contributions</title></rect>
+    <rect class="cell d-53" x="726" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-29: No contributions</title></rect>
+    <rect class="cell d-48" x="740" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-30: No contributions</title></rect>
+    <rect class="cell d-49" x="740" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-08-31: No contributions</title></rect>
+    <rect class="cell d-50" x="740" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-01: No contributions</title></rect>
+    <rect class="cell d-51" x="740" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-02: No contributions</title></rect>
+    <rect class="cell d-52" x="740" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-03: No contributions</title></rect>
+    <rect class="cell d-53" x="740" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-04: No contributions</title></rect>
+    <rect class="cell d-54" x="740" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-05: No contributions</title></rect>
+    <rect class="cell d-49" x="754" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-06: No contributions</title></rect>
+    <rect class="cell d-50" x="754" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-07: No contributions</title></rect>
+    <rect class="cell d-51" x="754" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-08: No contributions</title></rect>
+    <rect class="cell d-52" x="754" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-09: No contributions</title></rect>
+    <rect class="cell d-53" x="754" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-10: No contributions</title></rect>
+    <rect class="cell d-54" x="754" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-11: No contributions</title></rect>
+    <rect class="cell d-55" x="754" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-12: No contributions</title></rect>
+    <rect class="cell d-50" x="768" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-13: No contributions</title></rect>
+    <rect class="cell d-51" x="768" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-14: No contributions</title></rect>
+    <rect class="cell d-52" x="768" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-15: No contributions</title></rect>
+    <rect class="cell d-53" x="768" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-16: No contributions</title></rect>
+    <rect class="cell d-54" x="768" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-17: No contributions</title></rect>
+    <rect class="cell d-55" x="768" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-18: No contributions</title></rect>
+    <rect class="cell d-56" x="768" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-19: No contributions</title></rect>
+    <rect class="cell d-51" x="782" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-20: No contributions</title></rect>
+    <rect class="cell d-52" x="782" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-21: No contributions</title></rect>
+    <rect class="cell d-53" x="782" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-22: No contributions</title></rect>
+    <rect class="cell d-54" x="782" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-23: No contributions</title></rect>
+    <rect class="cell d-55" x="782" y="118" width="11" height="11" rx="2" fill="#006d32"><title>2026-09-24: 2 contributions</title></rect>
+    <rect class="cell d-56" x="782" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-25: No contributions</title></rect>
+    <rect class="cell d-57" x="782" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-26: No contributions</title></rect>
+    <rect class="cell d-52" x="796" y="62" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-27: No contributions</title></rect>
+    <rect class="cell d-53" x="796" y="76" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-28: No contributions</title></rect>
+    <rect class="cell d-54" x="796" y="90" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-29: No contributions</title></rect>
+    <rect class="cell d-55" x="796" y="104" width="11" height="11" rx="2" fill="#161b22"><title>2026-09-30: No contributions</title></rect>
+    <rect class="cell d-56" x="796" y="118" width="11" height="11" rx="2" fill="#161b22"><title>2026-10-01: No contributions</title></rect>
+    <rect class="cell d-57" x="796" y="132" width="11" height="11" rx="2" fill="#161b22"><title>2026-10-02: No contributions</title></rect>
+    <rect class="cell d-58" x="796" y="146" width="11" height="11" rx="2" fill="#161b22"><title>2026-10-03: No contributions</title></rect>
+
+  <!-- Footer Stats -->
+  <g transform="translate(32, 194)">
+    <text x="0" y="0" class="stat-bold">63 contributions in the last year</text>
+    <text x="235" y="0" class="stat-muted">•  Current streak: 0d  •  Longest: 2d</text>
+  </g>
+
+  <!-- Legend -->
+    <text x="675" y="194" fill="#7d8590" font-size="10" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Less</text>
+    <rect x="705" y="186" width="10" height="10" rx="2" fill="#161b22" />
+    <rect x="718" y="186" width="10" height="10" rx="2" fill="#0e4429" />
+    <rect x="731" y="186" width="10" height="10" rx="2" fill="#006d32" />
+    <rect x="744" y="186" width="10" height="10" rx="2" fill="#26a641" />
+    <rect x="757" y="186" width="10" height="10" rx="2" fill="#39d353" />
+    <rect x="770" y="186" width="10" height="10" rx="2" fill="#69f0a0" />
+    <text x="789" y="194" fill="#7d8590" font-size="10" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">More</text>
+</svg>

@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 440" width="490" height="440">
+  <style>
+
+    @keyframes lineFadeIn {
+      0% {
+        opacity: 0;
+        transform: translateX(-12px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    .line {
+      opacity: 0;
+      animation: lineFadeIn 0.38s ease-out forwards;
+      transform-box: fill-box;
+      transform-origin: left center;
+    }
+
+    .l-0 { animation-delay: 0.12s; }
+    .l-1 { animation-delay: 0.2s; }
+    .l-2 { animation-delay: 0.28s; }
+    .l-3 { animation-delay: 0.36s; }
+    .l-4 { animation-delay: 0.44s; }
+    .l-5 { animation-delay: 0.52s; }
+    .l-6 { animation-delay: 0.6s; }
+    .l-7 { animation-delay: 0.68s; }
+    .l-8 { animation-delay: 0.76s; }
+    .l-9 { animation-delay: 0.84s; }
+    .l-10 { animation-delay: 0.92s; }
+    .l-11 { animation-delay: 1.0s; }
+    .l-12 { animation-delay: 1.08s; }
+    .header-bar-text {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 11px;
+      fill: #8b949e;
+    }
+  </style>
+
+  <!-- Terminal Window Container -->
+  <rect x="0.5" y="0.5" width="489" height="439" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1" />
+
+  <!-- Window Chrome Dots -->
+  <circle cx="22" cy="22" r="5" fill="#ff5f56" />
+  <circle cx="38" cy="22" r="5" fill="#ffbd2e" />
+  <circle cx="54" cy="22" r="5" fill="#27c93f" />
+  <text x="74" y="26" class="header-bar-text">aakash@noir-system ~ neofetch</text>
+
+  <!-- Info Lines -->
+  <g class="line l-0" transform="translate(32, 65)">
+    <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="bold">
+      <tspan fill="#7ee787">aakash</tspan>
+      <tspan fill="#8b949e">@</tspan>
+      <tspan fill="#58a6ff">noir-system</tspan>
+    </text>
+  </g>
+  <g class="line l-1" transform="translate(32, 83)">
+    <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#30363d">---------------------------------------</text>
+  </g>
+  <g class="line l-2" transform="translate(32, 107)">
+    <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+      <tspan fill="#c9a84c" font-weight="600">OS         </tspan>
+      <tspan fill="#484f58"> : </tspan>
+      <tspan fill="#e6edf3">Ubuntu Linux / x86_64</tspan>
+    </text>
+  </g>
+  <g class="line l-3" transform="translate(32, 131)">
+    <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+      <tspan fill="#c9a84c" font-weight="600">Host       </tspan>
+      <tspan fill="#484f58"> : </tspan>
+      <tspan fill="#e6edf3">github.com/Aakashxnoir</tspan>
+    </text>
+  </g>
+  <g class="line l-4" transform="translate(32, 155)">
+    <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+      <tspan fill="#c9a84c" font-weight="600">Role       </tspan>
+      <tspan fill="#484f58"> : </tspan>
+      <tspan fill="#c9a84c">Full-Stack Dev & AI Builder</tspan>
+    </text>
+  </g>
+  <g class="line l-5" transform="translate(32, 179)">
+    <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+      <tspan fill="#c9a84c" font-weight="600">Now        </tspan>
+      <tspan fill="#484f58"> : </tspan>
+      <tspan fill="#e6edf3">Shipping productivity systems & AI tools</tspan>
+    </text>
+  </g>
+  <g class="line l-6" transform="translate(32, 203)">
+    <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+      <tspan fill="#c9a84c" font-weight="600">Prev       </tspan>
+      <tspan fill="#484f58"> : </tspan>
+      <tspan fill="#8b949e">Life Tracker · NBOS Skill Swap · College OS</tspan>
+    </text>
+  </g>
+  <g class="line l-7" transform="translate(32, 227)">
+    <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+      <tspan fill="#c9a84c" font-weight="600">Stack      </tspan>
+      <tspan fill="#484f58"> : </tspan>
+      <tspan fill="#7ee787">TypeScript, Python, React, Java, Node</tspan>
+    </text>
+  </g>
+  <g class="line l-8" transform="translate(32, 251)">
+    <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+      <tspan fill="#c9a84c" font-weight="600">Focus      </tspan>
+      <tspan fill="#484f58"> : </tspan>
+      <tspan fill="#e6edf3">Clean architecture, darker aesthetics</tspan>
+    </text>
+  </g>
+  <g class="line l-9" transform="translate(32, 275)">
+    <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+      <tspan fill="#c9a84c" font-weight="600">Highlights </tspan>
+      <tspan fill="#484f58"> : </tspan>
+      <tspan fill="#58a6ff">10+ public repos · rapid shipping</tspan>
+    </text>
+  </g>
+  <g class="line l-10" transform="translate(32, 299)">
+    <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+      <tspan fill="#c9a84c" font-weight="600">Noir Mode  </tspan>
+      <tspan fill="#484f58"> : </tspan>
+      <tspan fill="#c9a84c">True [active]</tspan>
+    </text>
+  </g>
+  <g class="line l-12" transform="translate(32, 335)">
+    <rect x="0" y="0" width="20" height="12" rx="3" fill="#0d1117" /><rect x="26" y="0" width="20" height="12" rx="3" fill="#ff7b72" /><rect x="52" y="0" width="20" height="12" rx="3" fill="#7ee787" /><rect x="78" y="0" width="20" height="12" rx="3" fill="#d29922" /><rect x="104" y="0" width="20" height="12" rx="3" fill="#58a6ff" /><rect x="130" y="0" width="20" height="12" rx="3" fill="#bc8cff" /><rect x="156" y="0" width="20" height="12" rx="3" fill="#39c5cf" /><rect x="182" y="0" width="20" height="12" rx="3" fill="#e6edf3" />
+    <rect x="0" y="16" width="20" height="12" rx="3" fill="#484f58" /><rect x="26" y="16" width="20" height="12" rx="3" fill="#ffa198" /><rect x="52" y="16" width="20" height="12" rx="3" fill="#56d364" /><rect x="78" y="16" width="20" height="12" rx="3" fill="#e3b341" /><rect x="104" y="16" width="20" height="12" rx="3" fill="#79c0ff" /><rect x="130" y="16" width="20" height="12" rx="3" fill="#d2a8ff" /><rect x="156" y="16" width="20" height="12" rx="3" fill="#56d4dd" /><rect x="182" y="16" width="20" height="12" rx="3" fill="#ffffff" />
+  </g>
+</svg>

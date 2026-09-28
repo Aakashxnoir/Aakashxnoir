@@ -1,51 +1,23 @@
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=0D0D0D&text=Aakash&fontColor=c9a84c&fontSize=60&fontAlignY=38&desc=In%20the%20dark%2C%20the%20code%20still%20runs.&descAlignY=58&descSize=16&descColor=888888&animation=fadeIn" width="100%"/>
-</p>
-
-<p align="center">
-  <a href="https://github.com/Aakashxnoir">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=c9a84c&center=true&vCenter=true&width=600&lines=Full-Stack+Developer;AI+%26+Web+App+Builder;TypeScript+%7C+Python+%7C+JavaScript;Shipping+before+sunrise...;noir_mode+%3D+True" alt="Typing SVG" />
-  </a>
-</p>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Aakashxnoir&label=Profile+Views&color=c9a84c&style=flat-square&base=0D0D0D" alt="profile views"/>
-</p>
+<div align="center">
+  <h3><code>aakash@github ~ $ ./contributions.sh</code></h3>
+  <img src="./contrib-heatmap.svg" width="860" alt="Aakash's Contribution Calendar Heatmap" />
+  <br><br>
+  <h3><code>aakash@github ~ $ whoami</code></h3>
+  <table>
+    <tr>
+      <td valign="top"><img src="./avi-ascii.svg" width="370" alt="Aakash ASCII Portrait" /></td>
+      <td valign="top"><img src="./info-card.svg" width="490" alt="Aakash Terminal Info Card" /></td>
+    </tr>
+  </table>
+</div>
 
 <br/>
 
----
+<div align="center">
+  <h3><code>aakash@github ~ $ cat ~/.config/stack.cfg</code></h3>
+</div>
 
-## `> whoami`
-
-<table>
-  <tr>
-    <td><code>username</code></td>
-    <td>🕶️ <strong>Aakashxnoir</strong></td>
-  </tr>
-  <tr>
-    <td><code>stack</code></td>
-    <td>🐍 Python &nbsp;·&nbsp; 🟦 TypeScript &nbsp;·&nbsp; 🟨 JavaScript &nbsp;·&nbsp; ☕ Java</td>
-  </tr>
-  <tr>
-    <td><code>building</code></td>
-    <td>🌐 Web Apps &nbsp;·&nbsp; 🤖 AI Tools &nbsp;·&nbsp; 🏗️ Full-Stack Projects</td>
-  </tr>
-  <tr>
-    <td><code>currently</code></td>
-    <td>🔭 Shipping full-stack productivity tools · 📡 Open to collabs</td>
-  </tr>
-  <tr>
-    <td><code>noir_mode</code></td>
-    <td>✅ <code>True</code></td>
-  </tr>
-</table>
-
----
-
-## `⚙️ stack`
-
-<p>
+<p align="center">
   <img src="https://img.shields.io/badge/TypeScript-0D0D0D?style=for-the-badge&logo=typescript&logoColor=c9a84c"/>
   <img src="https://img.shields.io/badge/JavaScript-0D0D0D?style=for-the-badge&logo=javascript&logoColor=c9a84c"/>
   <img src="https://img.shields.io/badge/Python-0D0D0D?style=for-the-badge&logo=python&logoColor=c9a84c"/>
@@ -55,19 +27,26 @@
   <img src="https://img.shields.io/badge/Node.js-0D0D0D?style=for-the-badge&logo=nodedotjs&logoColor=c9a84c"/>
 </p>
 
----
+<br/>
 
-## `🎯 focus`
+<div align="center">
+  <h3><code>aakash@github ~ $ cat /etc/motd</code></h3>
+</div>
+
+```text
 ╔══════════════════════════════════════════════════════════╗
 ║  ▸  Building full-stack productivity systems             ║
 ║  ▸  Crafting multilingual & accessible web apps          ║
 ║  ▸  Turning ideas into shipped products                  ║
 ║  ▸  Clean code, darker aesthetics                        ║
 ╚══════════════════════════════════════════════════════════╝
+```
 
----
+<br/>
 
-## `🗂️ projects`
+<div align="center">
+  <h3><code>aakash@github ~ $ ls -la ./projects/</code></h3>
+</div>
 
 | Project | Description | Stack | Type |
 |---|---|:---:|:---:|
@@ -85,36 +64,14 @@
 
 > 📌 Pinned on profile: `life-tracker` · `NBOS-Skill-swap` · `Geeks-for-Geeks` · `Naruto-Dodge-Game`
 
----
-
-## `📊 stats`
-
-<div align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=Aakashxnoir&show_icons=true&theme=dark&hide_border=true&bg_color=0D0D0D&title_color=c9a84c&icon_color=c9a84c&text_color=FFFFFF&include_all_commits=true&count_private=true" height="160" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Aakashxnoir&layout=compact&theme=dark&hide_border=true&bg_color=0D0D0D&title_color=c9a84c&text_color=FFFFFF&langs_count=6" height="160" />
-</div>
-
-<div align="center">
-<img src="https://github-profile-trophy.vercel.app/?username=Aakashxnoir&theme=darkhub&no-frame=true&no-bg=true&row=1&column=6&margin-w=8" width="100%" />
-</div>
-
 <br/>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Aakashxnoir/Aakashxnoir/output/github-contribution-grid-snake-dark.svg" width="100%" />
+  <h3><code>aakash@github ~ $ ping -c 1 aakashxnoir</code></h3>
 </div>
-
-<sub>⚠️ snake image only appears once the `snake.yml` workflow below has run at least once — see setup note.</sub>
-
----
-
-## `📡 connect`
 
 <p align="center">
   <a href="https://github.com/Aakashxnoir"><img src="https://img.shields.io/badge/GitHub-0D0D0D?style=for-the-badge&logo=github&logoColor=c9a84c"/></a>
-  <!-- Add your other profiles below, e.g. -->
-  <!-- <a href="YOUR_LINKEDIN_URL"><img src="https://img.shields.io/badge/LinkedIn-0D0D0D?style=for-the-badge&logo=linkedin&logoColor=c9a84c"/></a> -->
-  <!-- <a href="mailto:YOUR_EMAIL"><img src="https://img.shields.io/badge/Email-0D0D0D?style=for-the-badge&logo=gmail&logoColor=c9a84c"/></a> -->
 </p>
 
 <p align="center">
