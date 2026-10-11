@@ -20,14 +20,15 @@ def generate_info_card(output_path: str = DEFAULT_OUTPUT_PATH):
     lines_data = [
         {"type": "header", "user": "aakash", "host": "noir-system"},
         {"type": "divider"},
-        {"key": "OS", "val": "CachyOS / x86_64", "val_color": "#e6edf3"},
+        {"key": "OS", "val": "Ubuntu Linux / x86_64", "val_color": "#e6edf3"},
         {"key": "Host", "val": "github.com/Aakashxnoir", "val_color": "#e6edf3"},
-        {"key": "Role", "val": "Student developer", "val_color": "#c9a84c"},
-        {"key": "Now", "val": "FarmSync · portfolio rebuild", "val_color": "#e6edf3"},
-        {"key": "Prev", "val": "Life Tracker · College OS · Skill Swap", "val_color": "#8b949e"},
-        {"key": "Stack", "val": "TypeScript, Python, React, Java", "val_color": "#7ee787"},
-        {"key": "Focus", "val": "Full-stack web apps, Firebase, Azure", "val_color": "#e6edf3"},
-        {"key": "Highlights", "val": "19 public repos · since Jun 2025", "val_color": "#58a6ff"},
+        {"key": "Role", "val": "Full-Stack Dev & AI Builder", "val_color": "#c9a84c"},
+        {"key": "Now", "val": "Shipping productivity systems & AI tools", "val_color": "#e6edf3"},
+        {"key": "Prev", "val": "Life Tracker · NBOS Skill Swap · College OS", "val_color": "#8b949e"},
+        {"key": "Stack", "val": "TypeScript, Python, React, Java, Node", "val_color": "#7ee787"},
+        {"key": "Focus", "val": "Clean architecture, darker aesthetics", "val_color": "#e6edf3"},
+        {"key": "Highlights", "val": "10+ public repos · rapid shipping", "val_color": "#58a6ff"},
+        {"key": "Noir Mode", "val": "True [active]", "val_color": "#c9a84c"},
         {"type": "spacer"},
         {"type": "palette"}
     ]

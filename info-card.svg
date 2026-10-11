@@ -26,6 +26,7 @@
     .l-9 { animation-delay: 0.84s; }
     .l-10 { animation-delay: 0.92s; }
     .l-11 { animation-delay: 1.0s; }
+    .l-12 { animation-delay: 1.08s; }
     .header-bar-text {
       font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
       font-size: 11px;
@@ -57,7 +58,7 @@
     <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
       <tspan fill="#c9a84c" font-weight="600">OS         </tspan>
       <tspan fill="#484f58"> : </tspan>
-      <tspan fill="#e6edf3">CachyOS / x86_64</tspan>
+      <tspan fill="#e6edf3">Ubuntu Linux / x86_64</tspan>
     </text>
   </g>
   <g class="line l-3" transform="translate(32, 131)">
@@ -71,45 +72,52 @@
     <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
       <tspan fill="#c9a84c" font-weight="600">Role       </tspan>
       <tspan fill="#484f58"> : </tspan>
-      <tspan fill="#c9a84c">Student developer</tspan>
+      <tspan fill="#c9a84c">Full-Stack Dev &amp; AI Builder</tspan>
     </text>
   </g>
   <g class="line l-5" transform="translate(32, 179)">
     <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
       <tspan fill="#c9a84c" font-weight="600">Now        </tspan>
       <tspan fill="#484f58"> : </tspan>
-      <tspan fill="#e6edf3">FarmSync · portfolio rebuild</tspan>
+      <tspan fill="#e6edf3">Shipping productivity systems &amp; AI tools</tspan>
     </text>
   </g>
   <g class="line l-6" transform="translate(32, 203)">
     <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
       <tspan fill="#c9a84c" font-weight="600">Prev       </tspan>
       <tspan fill="#484f58"> : </tspan>
-      <tspan fill="#8b949e">Life Tracker · College OS · Skill Swap</tspan>
+      <tspan fill="#8b949e">Life Tracker · NBOS Skill Swap · College OS</tspan>
     </text>
   </g>
   <g class="line l-7" transform="translate(32, 227)">
     <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
       <tspan fill="#c9a84c" font-weight="600">Stack      </tspan>
       <tspan fill="#484f58"> : </tspan>
-      <tspan fill="#7ee787">TypeScript, Python, React, Java</tspan>
+      <tspan fill="#7ee787">TypeScript, Python, React, Java, Node</tspan>
     </text>
   </g>
   <g class="line l-8" transform="translate(32, 251)">
     <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
       <tspan fill="#c9a84c" font-weight="600">Focus      </tspan>
       <tspan fill="#484f58"> : </tspan>
-      <tspan fill="#e6edf3">Full-stack web apps, Firebase, Azure</tspan>
+      <tspan fill="#e6edf3">Clean architecture, darker aesthetics</tspan>
     </text>
   </g>
   <g class="line l-9" transform="translate(32, 275)">
     <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
       <tspan fill="#c9a84c" font-weight="600">Highlights </tspan>
       <tspan fill="#484f58"> : </tspan>
-      <tspan fill="#58a6ff">19 public repos · since Jun 2025</tspan>
+      <tspan fill="#58a6ff">10+ public repos · rapid shipping</tspan>
     </text>
   </g>
-  <g class="line l-11" transform="translate(32, 311)">
+  <g class="line l-10" transform="translate(32, 299)">
+    <text font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+      <tspan fill="#c9a84c" font-weight="600">Noir Mode  </tspan>
+      <tspan fill="#484f58"> : </tspan>
+      <tspan fill="#c9a84c">True [active]</tspan>
+    </text>
+  </g>
+  <g class="line l-12" transform="translate(32, 335)">
     <rect x="0" y="0" width="20" height="12" rx="3" fill="#0d1117" /><rect x="26" y="0" width="20" height="12" rx="3" fill="#ff7b72" /><rect x="52" y="0" width="20" height="12" rx="3" fill="#7ee787" /><rect x="78" y="0" width="20" height="12" rx="3" fill="#d29922" /><rect x="104" y="0" width="20" height="12" rx="3" fill="#58a6ff" /><rect x="130" y="0" width="20" height="12" rx="3" fill="#bc8cff" /><rect x="156" y="0" width="20" height="12" rx="3" fill="#39c5cf" /><rect x="182" y="0" width="20" height="12" rx="3" fill="#e6edf3" />
     <rect x="0" y="16" width="20" height="12" rx="3" fill="#484f58" /><rect x="26" y="16" width="20" height="12" rx="3" fill="#ffa198" /><rect x="52" y="16" width="20" height="12" rx="3" fill="#56d364" /><rect x="78" y="16" width="20" height="12" rx="3" fill="#e3b341" /><rect x="104" y="16" width="20" height="12" rx="3" fill="#79c0ff" /><rect x="130" y="16" width="20" height="12" rx="3" fill="#d2a8ff" /><rect x="156" y="16" width="20" height="12" rx="3" fill="#56d4dd" /><rect x="182" y="16" width="20" height="12" rx="3" fill="#ffffff" />
   </g>
