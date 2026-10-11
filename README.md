@@ -16,12 +16,12 @@
 
   <h3><code>aakash@github ~ $ ls ./projects</code></h3>
   <table>
-    <tr><td><a href="https://github.com/Aakashxnoir/College-Productivity-OS-"><code>college-productivity-os</code></a></td><td>schedule, exams, habits and notes for students</td></tr>
-    <tr><td><a href="https://github.com/Aakashxnoir/life-tracker"><code>life-tracker</code></a></td><td>habit and focus tracker · React, Firebase</td></tr>
-    <tr><td><a href="https://github.com/Aakashxnoir/FarmSync"><code>farmsync</code></a></td><td>crop planning guide for new farmers · Python</td></tr>
-    <tr><td><a href="https://github.com/Aakashxnoir/NBOS-Skill-swap-"><code>skill-swap</code></a></td><td>a platform to trade skills with each other</td></tr>
-    <tr><td><a href="https://github.com/Aakashxnoir/Student-Library-management-"><code>library-management</code></a></td><td>Spring Boot app with admin and student roles</td></tr>
-    <tr><td><a href="https://github.com/Aakashxnoir/Infinitus"><code>infinitus</code></a></td><td>website for a mathematics club · <a href="https://infinitus-seven.vercel.app/">live</a></td></tr>
+    <tr><td><a href="https://github.com/Aakashxnoir/Dungeons-and-dragons-"><code>dungeons-and-dragons</code></a></td><td>first game: a hero stuck in a dungeon, forced to defeat the boss · GDScript</td></tr>
+    <tr><td><a href="https://github.com/Aakashxnoir/GoonerBoard"><code>goonerboard</code></a></td><td>discord-style hangout built with friends · TypeScript</td></tr>
+    <tr><td><a href="https://github.com/Aakashxnoir/Infinitus"><code>infinitus</code></a></td><td>website for a mathematics club · JavaScript · <a href="https://infinitus-seven.vercel.app/">live</a></td></tr>
+    <tr><td><a href="https://github.com/Aakashxnoir/Landroid_Analysis-App"><code>landroid-analysis-app</code></a></td><td>analysis app · TypeScript</td></tr>
+    <tr><td><a href="https://github.com/Aakashxnoir/mac-styled-portfilio-"><code>mac-styled-portfolio</code></a></td><td>macOS-inspired personal portfolio · HTML · <a href="https://aakash-portfolio-smoky.vercel.app/">live</a></td></tr>
+    <tr><td><a href="https://github.com/Aakashxnoir/Sevagan---Multilingual-Service-app"><code>sevagan</code></a></td><td>multilingual service app · JavaScript</td></tr>
   </table>
 
   <br>
