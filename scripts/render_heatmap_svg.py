@@ -14,8 +14,7 @@ DEFAULT_JSON_PATH = "data/contributions.json"
 DEFAULT_OUTPUT_PATH = "contrib-heatmap.svg"
 
 # Palette: level 0 to level 5 (level 5 is neon highlight)
-# level 0 is styled via CSS (.c0) so it adapts to light/dark; 1-5 are a single warm ramp
-PALETTE = ["c0", "c1", "c2", "c3", "c4", "c5"]  # colours live in CSS (light/dark)
+PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"]
 
 MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
@@ -132,7 +131,7 @@ def render_heatmap(json_path: str = DEFAULT_JSON_PATH, output_path: str = DEFAUL
       transform-origin: center;
     }
     .cell:hover {
-      stroke: #c08a5a;
+      stroke: #58a6ff;
       stroke-width: 1.5px;
       cursor: pointer;
     }
@@ -151,7 +150,7 @@ def render_heatmap(json_path: str = DEFAULT_JSON_PATH, output_path: str = DEFAUL
     for mw, mname in month_positions:
         if mw - last_mw >= 3 and mw < 51:
             mx = grid_x + (mw * stride)
-            month_svg.append(f'    <text x="{mx}" y="{grid_y - 10}" class="muted" font-size="10" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">{mname}</text>')
+            month_svg.append(f'    <text x="{mx}" y="{grid_y - 10}" fill="#7d8590" font-size="10" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">{mname}</text>')
             last_mw = mw
             
     # Weekday labels
@@ -164,7 +163,7 @@ def render_heatmap(json_path: str = DEFAULT_JSON_PATH, output_path: str = DEFAUL
     weekday_svg = []
     for r_idx, wname in weekday_labels:
         wy = grid_y + (r_idx * stride) + 9
-        weekday_svg.append(f'    <text x="32" y="{wy}" class="muted" font-size="9" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">{wname}</text>')
+        weekday_svg.append(f'    <text x="32" y="{wy}" fill="#7d8590" font-size="9" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">{wname}</text>')
         
     # Grid rects
     cells_svg = []
@@ -174,14 +173,12 @@ def render_heatmap(json_path: str = DEFAULT_JSON_PATH, output_path: str = DEFAUL
             cy = grid_y + (r_idx * stride)
             diag = w_idx + r_idx
             cls = "cell" if is_static else f"cell d-{diag}"
-            cls += " " + day["color"]
-            fill = ""
             cnt = day["count"]
             d_str = day["date"]
             c_text = "No contributions" if cnt == 0 else f"{cnt} contribution{'s' if cnt != 1 else ''}"
             
             cells_svg.append(
-                f'    <rect class="{cls}" x="{cx}" y="{cy}" width="{cell_size}" height="{cell_size}" rx="2"{fill}>'
+                f'    <rect class="{cls}" x="{cx}" y="{cy}" width="{cell_size}" height="{cell_size}" rx="2" fill="{day["color"]}">'
                 f'<title>{d_str}: {c_text}</title></rect>'
             )
             
@@ -189,42 +186,44 @@ def render_heatmap(json_path: str = DEFAULT_JSON_PATH, output_path: str = DEFAUL
     legend_x = 705
     legend_y = 186
     legend_svg = [
-        f'    <text x="{legend_x - 30}" y="{legend_y + 8}" class="muted" font-size="10" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Less</text>'
+        f'    <text x="{legend_x - 30}" y="{legend_y + 8}" fill="#7d8590" font-size="10" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Less</text>'
     ]
     for idx, color in enumerate(PALETTE):
         lx = legend_x + (idx * 13)
-        attr = f'class="{color}"'
-        legend_svg.append(f'    <rect {attr} x="{lx}" y="{legend_y}" width="10" height="10" rx="2" />')
+        legend_svg.append(f'    <rect x="{lx}" y="{legend_y}" width="10" height="10" rx="2" fill="{color}" />')
     legend_svg.append(
-        f'    <text x="{legend_x + (len(PALETTE) * 13) + 6}" y="{legend_y + 8}" class="muted" font-size="10" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">More</text>'
+        f'    <text x="{legend_x + (len(PALETTE) * 13) + 6}" y="{legend_y + 8}" fill="#7d8590" font-size="10" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">More</text>'
     )
     
     svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}">
   <style>
 {css_block}
-    .c0 {{ fill: #d0d7de; }} .c1 {{ fill: #ecd3b4; }} .c2 {{ fill: #deb283; }}
-    .c3 {{ fill: #c98d52; }} .c4 {{ fill: #a86a32; }} .c5 {{ fill: #7a4a1c; }}
-    .muted {{ fill: #6e7781; }}
-    .stat-bold {{ fill: #1f2328; }}
-    .stat-muted {{ fill: #6e7781; }}
-    @media (prefers-color-scheme: dark) {{
-      .c0 {{ fill: #21262d; }} .c1 {{ fill: #4a3b2e; }} .c2 {{ fill: #7a5a3c; }}
-      .c3 {{ fill: #b0814f; }} .c4 {{ fill: #d9a56b; }} .c5 {{ fill: #f5cd9a; }}
-      .muted, .stat-muted {{ fill: #7d8590; }}
-      .stat-bold {{ fill: #e6edf3; }}
+    .header-text {{
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 12px;
+      fill: #8b949e;
     }}
     .stat-bold {{
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       font-weight: 600;
       font-size: 12px;
+      fill: #e6edf3;
     }}
     .stat-muted {{
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       font-size: 11px;
+      fill: #7d8590;
     }}
   </style>
 
-  <text x="32" y="26" class="stat-bold">github.com/{username}</text>
+  <!-- Container Box -->
+  <rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1" />
+
+  <!-- Terminal Top Bar -->
+  <circle cx="22" cy="22" r="5" fill="#ff5f56" />
+  <circle cx="38" cy="22" r="5" fill="#ffbd2e" />
+  <circle cx="54" cy="22" r="5" fill="#27c93f" />
+  <text x="74" y="26" class="header-text">github.com/{username} ~ contribution_matrix.sh</text>
 
   <!-- Month Labels -->
 {chr(10).join(month_svg)}
