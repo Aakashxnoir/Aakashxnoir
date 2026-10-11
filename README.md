@@ -1,24 +1,28 @@
-<div align="center">
-  <h3><code>aakash@github ~ $ whoami</code></h3>
-  <table>
-    <tr>
-      <td valign="top"><img src="./avi-ascii.svg" width="300" alt="Aakash — ASCII Portrait" /></td>
-      <td valign="top"><img src="./wordmark.svg" width="560" alt="AAKASH — 3D ASCII Wordmark" /></td>
-    </tr>
-  </table>
+<img src="https://github.com/Aakashxnoir.png?size=96" width="72" align="left" style="border-radius:50%" alt="">
 
-  <br><br>
+# Aakash
 
-  <h3><code>aakash@github ~ $ ./contributions.sh</code></h3>
-  <img src="./contrib-heatmap.svg" width="860" alt="Aakash's Contribution Calendar Heatmap" />
+Student developer. I build small, finished things — web apps, tools, the odd game — and learn by shipping them.
 
-  <br><br>
+Mostly TypeScript, React and Python. Currently into full-stack apps with Firebase and Azure.
 
-  <h3><code>aakash@github ~ $ ./links.sh</code></h3>
-  <p>
-    <a href="https://www.linkedin.com/in/aakashbuddhakannan/"><img src="https://img.shields.io/badge/LinkedIn-aakashbuddhakannan-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>&nbsp;
-    <a href="https://www.instagram.com/"><img src="https://img.shields.io/badge/Instagram-Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>&nbsp;
-    <a href="https://github.com/Aakashxnoir"><img src="https://img.shields.io/badge/GitHub-Aakashxnoir-0d1117?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-  </p>
-  <br>
-</div>
+<br clear="left">
+
+## Selected work
+
+| Project | What it is | Stack |
+| :-- | :-- | :-- |
+| [**College Productivity OS**](https://github.com/Aakashxnoir/College-Productivity-OS-) | Schedule, exams, study sessions, habits and notes in one place for students | JavaScript |
+| [**Life Tracker**](https://github.com/Aakashxnoir/life-tracker) | Personal habit and focus tracker with Google sign-in | React · Vite · Tailwind · Firebase |
+| [**Student Library Management**](https://github.com/Aakashxnoir/Student-Library-management-) | Library operations with admin and student roles | Spring Boot · Thymeleaf · H2 |
+| [**NBOS Skill Swap**](https://github.com/Aakashxnoir/NBOS-Skill-swap-) | A platform for people to trade skills with each other | JavaScript |
+| [**Infinitus**](https://github.com/Aakashxnoir/Infinitus) | Website for a mathematics club | JavaScript |
+| [**Dungeons & Dragons**](https://github.com/Aakashxnoir/Dungeons-and-dragons-) | First game: a hero, a dungeon, a boss | GDScript · Godot |
+
+## Activity
+
+<img src="./contrib-heatmap.svg" width="860" alt="Contribution calendar for the last year">
+
+## Elsewhere
+
+[LinkedIn](https://www.linkedin.com/in/aakashbuddhakannan/) · [Portfolio repo](https://github.com/Aakashxnoir/My-new-website-)
