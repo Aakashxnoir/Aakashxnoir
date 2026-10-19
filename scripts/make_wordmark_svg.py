@@ -192,13 +192,70 @@ def rasterize(q, scale, cx, cy):
     return ["".join(RAMP[i] for i in r) for r in grid]
 
 
+def frame_group(rows, left, top, extra=""):
+    """One frame of ASCII rows as an SVG <g>, its top-left corner at (left, top)."""
+    fs = CELL_H * 0.92
+    out_rows = []
+    for ry, line in enumerate(rows):
+        s = line.rstrip()
+        if not s.strip():
+            continue
+        lead = len(s) - len(s.lstrip(" "))
+        body = s[lead:]
+        x = left + lead * CELL_W
+        y = top + ry * CELL_H + CELL_H * 0.78
+        out_rows.append(
+            f'<text xml:space="preserve" x="{x:.1f}" y="{y:.1f}" font-size="{fs:.1f}" '
+            f'textLength="{len(body)*CELL_W:.1f}" lengthAdjust="spacing">{html.escape(body)}</text>'
+        )
+    return f'<g fill="{INK}"{extra}>' + "".join(out_rows) + "</g>\n"
+
+
+def rock_frames(frame_groups, dur, begin):
+    """Loop pre-rendered frame groups (each ending in </g>) with discrete opacity steps."""
+    n = len(frame_groups)
+    out = []
+    for i, g in enumerate(frame_groups):
+        if i == 0:
+            vals, kt = "1;0", f"0;{1/n:.5f}"
+        else:
+            vals, kt = "0;1;0", f"0;{i/n:.5f};{(i+1)/n:.5f}"
+        anim = (f'<animate attributeName="opacity" calcMode="discrete" values="{vals}" '
+                f'keyTimes="{kt}" dur="{dur:.2f}s" begin="{begin:.2f}s" '
+                f'repeatCount="indefinite"/>')
+        out.append(g.replace("</g>\n", anim + "</g>\n"))
+    return out
+
+
+def make_frames(mode="rock", nframes=None, dur=None):
+    """Project the extruded text for every frame of the chosen animation mode."""
+    P, N = build_shell()
+    rest = math.radians(-13)
+    if mode == "spin":
+        nf = nframes or 36
+        yaws = [rest + 2 * math.pi * i / nf for i in range(nf)]
+        dur = dur or 7.0
+    elif mode == "once":
+        nf = nframes or 32
+        yaws = [rest + 2 * math.pi * i / nf for i in range(nf)] + [rest]
+        dur = dur or 3.6
+    else:  # rock
+        nf = nframes or 20
+        amp = math.radians(11)
+        yaws = [rest + amp * math.sin(2 * math.pi * i / nf) for i in range(nf)]
+        dur = dur or 5.0
+
+    proj = [project(P, N, y) for y in yaws]
+    scale, cx, cy = fit(proj)
+    return [rasterize(q, scale, cx, cy) for q in proj], dur
+
+
 def emit(frames, mode, out, dur, reveal):
     art_w = COLS * CELL_W
     art_h = ROWS * CELL_H
     canvas_w = art_w + PAD * 2
     canvas_h = TITLEBAR_H + art_h + PAD
     art_top = TITLEBAR_H + PAD * 0.35
-    fs = CELL_H * 0.92
     n = len(frames)
 
     p = [
@@ -219,20 +276,7 @@ def emit(frames, mode, out, dur, reveal):
              f'font-size="12" text-anchor="middle">aakash@github: ~$ ./wordmark.sh --3d</text>\n')
 
     def frame_g(rows, extra=""):
-        out_rows = []
-        for ry, line in enumerate(rows):
-            s = line.rstrip()
-            if not s.strip():
-                continue
-            lead = len(s) - len(s.lstrip(" "))
-            body = s[lead:]
-            x = PAD + lead * CELL_W
-            y = art_top + ry * CELL_H + CELL_H * 0.78
-            out_rows.append(
-                f'<text xml:space="preserve" x="{x:.1f}" y="{y:.1f}" font-size="{fs:.1f}" '
-                f'textLength="{len(body)*CELL_W:.1f}" lengthAdjust="spacing">{html.escape(body)}</text>'
-            )
-        return f'<g fill="{INK}"{extra}>' + "".join(out_rows) + "</g>\n"
+        return frame_group(rows, PAD, art_top, extra)
 
     if mode == "static":
         p.append(frame_g(frames[0]))
@@ -263,15 +307,7 @@ def emit(frames, mode, out, dur, reveal):
                 sets += f'<set attributeName="opacity" to="0" begin="{begin+step:.3f}s"/>'
             p.append(frame_g(rows, ' opacity="0"').replace("</g>\n", sets + "</g>\n"))
     else:  # rock mode
-        for i, rows in enumerate(frames):
-            if i == 0:
-                vals, kt = "1;0", f"0;{1/n:.5f}"
-            else:
-                vals, kt = "0;1;0", f"0;{i/n:.5f};{(i+1)/n:.5f}"
-            anim = (f'<animate attributeName="opacity" calcMode="discrete" values="{vals}" '
-                    f'keyTimes="{kt}" dur="{dur:.2f}s" begin="{reveal:.2f}s" '
-                    f'repeatCount="indefinite"/>')
-            p.append(frame_g(rows, ' opacity="0"').replace("</g>\n", anim + "</g>\n"))
+        p.extend(rock_frames([frame_g(rows, ' opacity="0"') for rows in frames], dur, reveal))
 
     p.append("</svg>\n")
     svg = "".join(p)
@@ -295,25 +331,7 @@ def main():
     if a.text:
         TEXT = a.text
 
-    P, N = build_shell()
-    rest = math.radians(-13)
-    if a.mode == "spin":
-        nf = a.frames or 36
-        yaws = [rest + 2 * math.pi * i / nf for i in range(nf)]
-        dur = a.dur or 7.0
-    elif a.mode == "once":
-        nf = a.frames or 32
-        yaws = [rest + 2 * math.pi * i / nf for i in range(nf)] + [rest]
-        dur = a.dur or 3.6
-    else:  # rock
-        nf = a.frames or 20
-        amp = math.radians(11)
-        yaws = [rest + amp * math.sin(2 * math.pi * i / nf) for i in range(nf)]
-        dur = a.dur or 5.0
-
-    proj = [project(P, N, y) for y in yaws]
-    scale, cx, cy = fit(proj)
-    frames = [rasterize(q, scale, cx, cy) for q in proj]
+    frames, dur = make_frames(a.mode, a.frames, a.dur)
 
     if a.preview:
         for row in frames[0]:

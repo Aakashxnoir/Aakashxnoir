@@ -99,14 +99,17 @@ def render_heatmap(json_path: str = DEFAULT_JSON_PATH, output_path: str = DEFAUL
         
     is_static = os.environ.get("STATIC", "").lower() in ("1", "true", "yes")
     
-    # SVG Dimensions
+    # SVG Dimensions (same window chrome and width as whoami.svg)
     width = 860
-    height = 210
+    height = 218
+    titlebar_h = 36
     cell_size = 11
     cell_gap = 3
     stride = cell_size + cell_gap # 14
-    grid_x = 68
-    grid_y = 62
+    label_x = 44
+    grid_x = 80
+    grid_y = 72
+    mono = 'ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;, monospace'
     
     # CSS generation
     css_rules = []
@@ -150,7 +153,7 @@ def render_heatmap(json_path: str = DEFAULT_JSON_PATH, output_path: str = DEFAUL
     for mw, mname in month_positions:
         if mw - last_mw >= 3 and mw < 51:
             mx = grid_x + (mw * stride)
-            month_svg.append(f'    <text x="{mx}" y="{grid_y - 10}" fill="#7d8590" font-size="10" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">{mname}</text>')
+            month_svg.append(f'    <text x="{mx}" y="{grid_y - 10}" class="label">{mname}</text>')
             last_mw = mw
             
     # Weekday labels
@@ -163,7 +166,7 @@ def render_heatmap(json_path: str = DEFAULT_JSON_PATH, output_path: str = DEFAUL
     weekday_svg = []
     for r_idx, wname in weekday_labels:
         wy = grid_y + (r_idx * stride) + 9
-        weekday_svg.append(f'    <text x="32" y="{wy}" fill="#7d8590" font-size="9" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">{wname}</text>')
+        weekday_svg.append(f'    <text x="{label_x}" y="{wy}" class="label">{wname}</text>')
         
     # Grid rects
     cells_svg = []
@@ -182,48 +185,46 @@ def render_heatmap(json_path: str = DEFAULT_JSON_PATH, output_path: str = DEFAUL
                 f'<title>{d_str}: {c_text}</title></rect>'
             )
             
-    # Legend
-    legend_x = 705
-    legend_y = 186
+    # Legend, right-aligned with the grid's last column
+    grid_right = grid_x + 53 * stride - cell_gap
+    legend_y = grid_y + 7 * stride + 18
+    legend_x = grid_right - 30 - len(PALETTE) * 13
     legend_svg = [
-        f'    <text x="{legend_x - 30}" y="{legend_y + 8}" fill="#7d8590" font-size="10" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">Less</text>'
+        f'    <text x="{legend_x - 8}" y="{legend_y + 9}" class="label" text-anchor="end">less</text>'
     ]
     for idx, color in enumerate(PALETTE):
         lx = legend_x + (idx * 13)
         legend_svg.append(f'    <rect x="{lx}" y="{legend_y}" width="10" height="10" rx="2" fill="{color}" />')
     legend_svg.append(
-        f'    <text x="{legend_x + (len(PALETTE) * 13) + 6}" y="{legend_y + 8}" fill="#7d8590" font-size="10" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">More</text>'
+        f'    <text x="{legend_x + (len(PALETTE) * 13) + 5}" y="{legend_y + 9}" class="label">more</text>'
     )
-    
-    svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}">
+
+    svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}" font-family="{mono}">
   <style>
 {css_block}
-    .header-text {{
-      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
-      font-size: 12px;
-      fill: #8b949e;
-    }}
-    .stat-bold {{
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      font-weight: 600;
-      font-size: 12px;
-      fill: #e6edf3;
-    }}
-    .stat-muted {{
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      font-size: 11px;
+    .label {{
+      font-size: 10px;
       fill: #7d8590;
+    }}
+    .stat {{
+      font-size: 12px;
+      fill: #7d8590;
+    }}
+    .stat-hi {{
+      fill: #e6edf3;
+      font-weight: 600;
     }}
   </style>
 
-  <!-- Container Box -->
-  <rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1" />
-
-  <!-- Terminal Top Bar -->
-  <circle cx="22" cy="22" r="5" fill="#ff5f56" />
-  <circle cx="38" cy="22" r="5" fill="#ffbd2e" />
-  <circle cx="54" cy="22" r="5" fill="#27c93f" />
-  <text x="74" y="26" class="header-text">github.com/{username} ~ contribution_matrix.sh</text>
+  <!-- Terminal Window -->
+  <defs><linearGradient id="wbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#111722"/><stop offset="1" stop-color="#0d1117"/></linearGradient></defs>
+  <rect width="{width}" height="{height}" rx="10" fill="url(#wbg)" />
+  <rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="10" fill="none" stroke="#30363d" />
+  <line x1="0" y1="{titlebar_h}" x2="{width}" y2="{titlebar_h}" stroke="#30363d" />
+  <circle cx="20" cy="18" r="5" fill="#ff5f56" />
+  <circle cx="36" cy="18" r="5" fill="#ffbd2e" />
+  <circle cx="52" cy="18" r="5" fill="#27c93f" />
+  <text x="{width // 2}" y="22" fill="#7d8590" font-size="12" text-anchor="middle">aakash@github: ~ — contributions.sh</text>
 
   <!-- Month Labels -->
 {chr(10).join(month_svg)}
@@ -235,10 +236,7 @@ def render_heatmap(json_path: str = DEFAULT_JSON_PATH, output_path: str = DEFAUL
 {chr(10).join(cells_svg)}
 
   <!-- Footer Stats -->
-  <g transform="translate(32, 194)">
-    <text x="0" y="0" class="stat-bold">{total_contribs:,} contributions in the last year</text>
-    <text x="235" y="0" class="stat-muted">•  Current streak: {current_streak}d  •  Longest: {longest_streak}d</text>
-  </g>
+  <text x="{label_x}" y="{legend_y + 9}" class="stat" xml:space="preserve"><tspan class="stat-hi">{total_contribs:,}</tspan> contributions in the last year  ·  streak <tspan class="stat-hi">{current_streak}d</tspan>  ·  longest <tspan class="stat-hi">{longest_streak}d</tspan></text>
 
   <!-- Legend -->
 {chr(10).join(legend_svg)}
