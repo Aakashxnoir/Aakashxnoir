@@ -19,6 +19,23 @@ ALT_OUTPUT = "aakash-ascii.svg"
 # Density ramp: bright (sparse/spaces) -> dark (dense)
 RAMP = " .`:-=+*cs#%@"
 
+def image_to_ascii(img: Image.Image, grid_cols: int, grid_rows: int) -> list:
+    """Resize a grayscale image to the grid and map each pixel to a RAMP glyph."""
+    resized = img.resize((grid_cols, grid_rows), Image.Resampling.LANCZOS)
+    arr = np.array(resized)
+
+    ascii_rows = []
+    ramp_len = len(RAMP)
+    for r in range(grid_rows):
+        row_str = []
+        for c in range(grid_cols):
+            val = arr[r, c]
+            idx = int((255.0 - float(val)) / 255.0 * (ramp_len - 1))
+            idx = max(0, min(ramp_len - 1, idx))
+            row_str.append(RAMP[idx])
+        ascii_rows.append("".join(row_str))
+    return ascii_rows
+
 def generate_ascii_svg(input_path: str = DEFAULT_INPUT, output_path: str = DEFAULT_OUTPUT):
     if not os.path.exists(input_path):
         print(f"Error: {input_path} not found. Run prep_photo.py first.")
@@ -44,20 +61,7 @@ def generate_ascii_svg(input_path: str = DEFAULT_INPUT, output_path: str = DEFAU
     grid_rows = int(round(grid_cols * char_aspect / img_aspect))
     grid_rows = max(36, min(48, grid_rows))
 
-    resized = img.resize((grid_cols, grid_rows), Image.Resampling.LANCZOS)
-    arr = np.array(resized)
-
-    # Convert pixels to ASCII glyphs
-    ascii_rows = []
-    ramp_len = len(RAMP)
-    for r in range(grid_rows):
-        row_str = []
-        for c in range(grid_cols):
-            val = arr[r, c]
-            idx = int((255.0 - float(val)) / 255.0 * (ramp_len - 1))
-            idx = max(0, min(ramp_len - 1, idx))
-            row_str.append(RAMP[idx])
-        ascii_rows.append("".join(row_str))
+    ascii_rows = image_to_ascii(img, grid_cols, grid_rows)
 
     content_width = round(grid_cols * char_w, 1)
     content_x = round((svg_width - content_width) / 2.0, 1)
