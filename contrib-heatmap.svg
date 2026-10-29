@@ -493,13 +493,13 @@
     <rect class="cell d-52" x="808" y="72" width="11" height="11" rx="2" fill="#26a641"><title>2026-10-25: 7 contributions</title></rect>
     <rect class="cell d-53" x="808" y="86" width="11" height="11" rx="2" fill="#0e4429"><title>2026-10-26: 3 contributions</title></rect>
     <rect class="cell d-54" x="808" y="100" width="11" height="11" rx="2" fill="#0e4429"><title>2026-10-27: 3 contributions</title></rect>
-    <rect class="cell d-55" x="808" y="114" width="11" height="11" rx="2" fill="#0e4429"><title>2026-10-28: 1 contribution</title></rect>
+    <rect class="cell d-55" x="808" y="114" width="11" height="11" rx="2" fill="#0e4429"><title>2026-10-28: 2 contributions</title></rect>
     <rect class="cell d-56" x="808" y="128" width="11" height="11" rx="2" fill="#161b22"><title>2026-10-29: No contributions</title></rect>
     <rect class="cell d-57" x="808" y="142" width="11" height="11" rx="2" fill="#161b22"><title>2026-10-30: No contributions</title></rect>
     <rect class="cell d-58" x="808" y="156" width="11" height="11" rx="2" fill="#161b22"><title>2026-10-31: No contributions</title></rect>
 
   <!-- Footer Stats -->
-  <text x="44" y="197" class="stat" xml:space="preserve"><tspan class="stat-hi">159</tspan> contributions in the last year  ·  streak <tspan class="stat-hi">31d</tspan>  ·  longest <tspan class="stat-hi">31d</tspan></text>
+  <text x="44" y="197" class="stat" xml:space="preserve"><tspan class="stat-hi">160</tspan> contributions in the last year  ·  streak <tspan class="stat-hi">31d</tspan>  ·  longest <tspan class="stat-hi">31d</tspan></text>
 
   <!-- Legend -->
     <text x="703" y="197" class="label" text-anchor="end">less</text>
